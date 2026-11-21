@@ -113,6 +113,10 @@
             <div class="text-base font-semibold text-white mb-1">🚀 Salvare &amp; Mettere Online</div>
             <div class="text-xs text-slate-400">Push su GitHub e deploy Vercel</div>
           </button>
+          <button data-goal="teamwork" class="goal-btn text-left p-4 rounded-xl border border-slate-800 bg-slate-950 hover:border-blue-500 transition cursor-pointer">
+            <div class="text-base font-semibold text-white mb-1">👥 Creare un Team di Agenti</div>
+            <div class="text-xs text-slate-400">Squadra parallela (/teamwork) per grandi progetti</div>
+          </button>
         </div>
 
         <div id="wizardResult" class="mt-6 p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-4">
@@ -360,7 +364,8 @@
       social: { model: "Modello: Claude Sonnet 5.5", cmd: "Chat Normale", cost: "Costo Token: Basso", why: "Sonnet 5.5 è imbattibile per il copy italiano d'autorità su LinkedIn. Evita gli elenchi infiniti con le emoji da bot.", prompt: "Trasforma questo concetto/caso studio: \"[INCOLLA IDEA O RISULTATO]\" in un post LinkedIn B2B ad alta conversione. Struttura: Gancio forte (prima riga), Problema reale del cliente, Come lo abbiamo risolto con numeri concreti, Domanda finale. Massimo 1.200 caratteri, tono diretto, niente frasi fatte." },
       calendar: { model: "Modello: Gemini 3.8 Flash", cmd: "Skill: gcalendar", cost: "Costo Token: Minimo", why: "Collega direttamente il tuo Google Calendar. Usa Gemini Flash per risparmiare token su operazioni rapide di segreteria.", prompt: "Controlla il mio Google Calendar tra [DATA INIZIO] e [DATA FINE] e indicami 3 fasce orarie libere di almeno 30 minuti tra le 09:00 e le 18:00 per fissare una call con un cliente." },
       docs: { model: "Modello: Claude Sonnet 5.5", cmd: "Skill: gdocs / gslides / gsheets", cost: "Costo Token: Medio", why: "Genera documenti, preventivi o presentazioni direttamente nel tuo Google Workspace pronti da condividere.", prompt: "Usa la skill [gdocs / gslides / gsheets] per creare un nuovo documento chiamato \"[TITOLO DOCUMENTO]\" basato su questi dati: [INCOLLA PUNTI CHIAVE]. Impaginalo in modo professionale e dammi il link diretto per aprirlo." },
-      deploy: { model: "Modello: Claude Sonnet 5.5", cmd: "Skill: github", cost: "Costo Token: Basso", why: "Salva in sicurezza il lavoro fatto nel workspace su GitHub, attivando automaticamente il deploy su Vercel (se collegato).", prompt: "Controlla che non ci siano errori nei file modificati in questa sessione, fai commit e push sul repository GitHub con un messaggio chiaro che descrive le modifiche fatte." }
+      deploy: { model: "Modello: Claude Sonnet 5.5", cmd: "Skill: github", cost: "Costo Token: Basso", why: "Salva in sicurezza il lavoro fatto nel workspace su GitHub, attivando automaticamente il deploy su Vercel (se collegato).", prompt: "Controlla che non ci siano errori nei file modificati in questa sessione, fai commit e push sul repository GitHub con un messaggio chiaro che descrive le modifiche fatte." },
+      teamwork: { model: "Modello: Orchestrator / Sonnet 5.5", cmd: "Comando: /teamwork", cost: "Costo Token: 🔴 Alto (Usa con cautela)", why: "Attiva una squadra di più agenti che lavorano in parallelo. Regola d'oro: limita sempre il team a massimo 3 agenti con ruoli chiari e imponi una pausa di approvazione, altrimenti bruciano token a vuoto.", prompt: "/teamwork Dobbiamo realizzare questo progetto complesso: [DESCRIVI OBIETTIVO]. Crea una squadra snella di MASSIMO 3 agenti:\n1) Ricercatore (raccoglie dati e analisi)\n2) Produttore (scrive i file/testi/codice)\n3) Revisore (controlla errori e qualità).\nFermatevi e chiedetemi il mio OK dopo aver definito il piano iniziale, prima di far partire la produzione." }
     };
 
     const commandsData = [
