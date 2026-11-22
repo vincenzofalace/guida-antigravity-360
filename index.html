@@ -8,7 +8,7 @@
   <style>
     body { background-color: #0b0f19; color: #f1f5f9; font-family: system-ui, -apple-system, sans-serif; }
     .tab-active { background-color: #3b82f6 !important; color: #ffffff !important; }
-    .cat-active { background-color: #2563eb !important; color: #ffffff !important; border-color: #3b82f6 !important; }
+    .cat-active, .soc-active { background-color: #2563eb !important; color: #ffffff !important; border-color: #3b82f6 !important; }
     .copy-toast { transition: opacity 0.2s ease; }
   </style>
 </head>
@@ -24,88 +24,98 @@
               Piattaforma Operativa 360°
             </span>
             <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-              Ultimo sync ambiente: Nov 2026
+              Sync Ambiente: 22 Nov 2026 • 12 Skill Attive
             </span>
           </div>
-          <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Google Antigravity 2.0 — Hub Comandi &amp; Automazioni</h1>
+          <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Google Antigravity 2.0 — Command Center</h1>
           <p class="text-sm text-slate-400 mt-1">
-            Ogni scenario lavorativo e personale pronto all'uso: seleziona la categoria, copia il prompt esatto e lavora senza errori.
+            Ricerca semantica intelligente, Social Suite completa, Ricerche di mercato con fonti certe e tutti i workflow del tuo ecosistema.
           </p>
         </div>
         <div class="w-full md:w-80">
-          <input
-            id="globalSearch"
-            type="text"
-            placeholder="🔍 Cerca (es. WhatsApp, Video, SEO, Bug)..."
-            class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          <div class="relative">
+            <input
+              id="globalSearch"
+              type="text"
+              placeholder="🔍 Ricerca semantica (es. trend, reel, wa, bug)..."
+              class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <p class="text-[11px] text-slate-500 mt-1">Capisce sinonimi e intenti (es. "clienti" → CRM/Offerte, "statistiche" → Ricerca Mercato)</p>
         </div>
       </div>
 
       <!-- Main Navigation -->
-      <nav class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800" id="navTabs">
-        <button data-tab="wizard" class="tab-btn tab-active px-3.5 py-2 rounded-xl text-xs md:text-sm font-medium transition cursor-pointer">🎯 Selettore Scenari (20+)</button>
-        <button data-tab="models" class="tab-btn px-3.5 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧠 Modelli AI</button>
-        <button data-tab="commands" class="tab-btn px-3.5 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">⚡ Tutti i Comandi</button>
-        <button data-tab="skills" class="tab-btn px-3.5 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🛠️ Skill Attive (10)</button>
-        <button data-tab="builder" class="tab-btn px-3.5 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧩 Crea Skill</button>
-        <button data-tab="debug" class="tab-btn px-3.5 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🚑 Bug &amp; Errori</button>
-        <button data-tab="apps" class="tab-btn px-3.5 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🔄 Sync &amp; App Esterne</button>
-        <button data-tab="tokens" class="tab-btn px-3.5 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">💰 Risparmio Token</button>
+      <nav class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-slate-800" id="navTabs">
+        <button data-tab="wizard" class="tab-btn tab-active px-3 py-2 rounded-xl text-xs md:text-sm font-medium transition cursor-pointer">🎯 Scenari (24)</button>
+        <button data-tab="social" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">📱 Social Suite (7 Canali)</button>
+        <button data-tab="ecosystem" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🗺️ Ecosistema &amp; Workflow</button>
+        <button data-tab="models" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧠 Modelli AI</button>
+        <button data-tab="commands" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">⚡ Comandi</button>
+        <button data-tab="skills" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🛠️ Skill (12)</button>
+        <button data-tab="builder" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧩 Crea Skill</button>
+        <button data-tab="debug" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🚑 Bug &amp; Errori</button>
+        <button data-tab="apps" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🔄 Sync &amp; App</button>
+        <button data-tab="tokens" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">💰 Token</button>
       </nav>
     </header>
 
-    <!-- Search Results -->
+    <!-- Semantic Search Results -->
     <section id="searchResultsSection" class="hidden space-y-4">
       <div class="flex items-center justify-between">
-        <h2 class="text-lg font-semibold text-white">Risultati della ricerca</h2>
+        <div>
+          <h2 class="text-lg font-semibold text-white">Risultati Ricerca Semantica</h2>
+          <p id="searchMeta" class="text-xs text-slate-400"></p>
+        </div>
         <button id="clearSearch" class="text-xs underline text-blue-400 cursor-pointer">Torna alle schede</button>
       </div>
       <div id="searchResultsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
     </section>
 
-    <!-- TAB 1: WIZARD 2.0 BY CATEGORY -->
+    <!-- TAB 1: SCENARI -->
     <section id="tab-wizard" class="tab-panel space-y-6">
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div>
-            <h2 class="text-lg font-bold text-white">Cosa devi realizzare oggi?</h2>
-            <p class="text-sm text-slate-400">Filtra per settore o aggiungi i tuoi scenari personali salvati nel browser.</p>
+            <h2 class="text-lg font-bold text-white">Selettore Scenari Operativi</h2>
+            <p class="text-sm text-slate-400">Scegli una categoria o clicca lo scenario per avere subito Modello, Skill e Prompt pronto.</p>
           </div>
           <button id="toggleCustomGoalBtn" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-600/30 cursor-pointer">
             + Aggiungi Scenario Tuo
           </button>
         </div>
 
-        <!-- Custom Scenario Form (hidden) -->
+        <!-- Custom Scenario Form -->
         <div id="customGoalForm" class="hidden p-4 rounded-xl bg-slate-950 border border-emerald-500/40 space-y-3">
-          <div class="text-xs font-bold uppercase text-emerald-400">Salva un tuo nuovo scenario personale (resta salvato su questo dispositivo)</div>
+          <div class="text-xs font-bold uppercase text-emerald-400">Salva un tuo scenario personale nel browser</div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
             <input id="cgTitle" type="text" placeholder="Titolo (es. 📩 Follow-up Preventivi)" class="px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white" />
-            <input id="cgModel" type="text" placeholder="Modello (es. Claude Sonnet 5.5)" value="Claude Sonnet 5.5" class="px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white" />
+            <input id="cgModel" type="text" placeholder="Modello" value="Claude Sonnet 5.5" class="px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white" />
             <select id="cgCat" class="px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white">
-              <option value="business">💼 Business &amp; Vendite</option>
-              <option value="automations">🤖 Automazioni &amp; WhatsApp</option>
-              <option value="media">🎨 Video &amp; Immagini</option>
+              <option value="research">📊 Ricerche &amp; Strategia</option>
               <option value="web">🌐 Siti, SEO &amp; Bug</option>
-              <option value="personal">🏠 Vita Personale &amp; Produttività</option>
+              <option value="automations">🤖 Automazioni &amp; CRM</option>
+              <option value="media">🎨 Video &amp; Immagini</option>
+              <option value="business">💼 Vendite, Team &amp; Docs</option>
+              <option value="personal">🏠 Vita Personale</option>
             </select>
           </div>
-          <textarea id="cgPrompt" rows="2" placeholder="Scrivi qui il prompt che vuoi salvare..." class="w-full px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white"></textarea>
+          <textarea id="cgPrompt" rows="2" placeholder="Scrivi qui il prompt..." class="w-full px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white"></textarea>
           <div class="flex gap-2">
-            <button id="saveCustomGoalBtn" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white cursor-pointer">Salva Scenario</button>
+            <button id="saveCustomGoalBtn" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white cursor-pointer">Salva</button>
             <button id="cancelCustomGoalBtn" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 cursor-pointer">Annulla</button>
           </div>
         </div>
 
         <!-- Category Filters -->
         <div class="flex flex-wrap gap-2" id="catFilters">
-          <button data-cat="all" class="cat-btn cat-active px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-200 cursor-pointer">Tutti</button>
+          <button data-cat="all" class="cat-btn cat-active px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-200 cursor-pointer">Tutti (24)</button>
+          <button data-cat="research" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">📊 Ricerche &amp; Strategia</button>
           <button data-cat="web" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">🌐 Siti, SEO &amp; Bug</button>
-          <button data-cat="automations" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">🤖 Automazioni &amp; WhatsApp</button>
+          <button data-cat="automations" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">🤖 Automazioni &amp; CRM</button>
           <button data-cat="media" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">🎨 Video &amp; Immagini</button>
-          <button data-cat="business" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">💼 Business, Team &amp; Vendite</button>
-          <button data-cat="personal" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">🏠 Vita Personale &amp; Produttività</button>
+          <button data-cat="business" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">💼 Vendite, Team &amp; Docs</button>
+          <button data-cat="personal" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">🏠 Vita Personale</button>
         </div>
 
         <!-- Goal Cards Grid -->
@@ -133,7 +143,119 @@
       </div>
     </section>
 
-    <!-- TAB 2: MODELS -->
+    <!-- TAB 2: SOCIAL SUITE MULTI-PIATTAFORMA -->
+    <section id="tab-social" class="tab-panel hidden space-y-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
+        <div>
+          <h2 class="text-lg font-bold text-white">📱 Social Suite Multi-Piattaforma</h2>
+          <p class="text-sm text-slate-400 mt-1">
+            Scegli la piattaforma specifica (o usa <strong>Generico / Nuovo Progetto</strong> per partire da zero), inserisci l'argomento e ottieni il prompt ottimizzato per quel preciso algoritmo.
+          </p>
+        </div>
+
+        <!-- Platform Tabs -->
+        <div class="flex flex-wrap gap-2" id="socialPlatformTabs">
+          <button data-soc="generic" class="soc-btn soc-active px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-800 text-white cursor-pointer">🌐 Generico (Nuovo Progetto)</button>
+          <button data-soc="linkedin" class="soc-btn px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">💼 LinkedIn</button>
+          <button data-soc="instagram" class="soc-btn px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">📸 Instagram</button>
+          <button data-soc="tiktok" class="soc-btn px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">🎵 TikTok</button>
+          <button data-soc="facebook" class="soc-btn px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">📘 Facebook</button>
+          <button data-soc="youtube" class="soc-btn px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">▶️ YouTube</button>
+          <button data-soc="threads" class="soc-btn px-3.5 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-950 text-slate-300 cursor-pointer">🧵 X / Threads</button>
+        </div>
+
+        <!-- Inputs -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Formato Specifico</label>
+            <select id="socFormat" class="w-full px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white"></select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Progetto / Cliente / Target</label>
+            <input id="socTarget" type="text" value="SyntoDesk / Agenzie Marketing e Studi Medici" class="w-full px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Argomento o Caso Studio</label>
+            <input id="socTopic" type="text" value="Perché il 70% dei CRM fallisce e come recuperare i lead in 15 minuti" class="w-full px-3 py-2 text-xs rounded-lg bg-slate-900 border border-slate-800 text-white" />
+          </div>
+        </div>
+
+        <!-- Output -->
+        <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <span id="socBadgeModel" class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-blue-500/20 text-blue-300">Modello: Claude Sonnet 5.5</span>
+            <span id="socBadgeSkill" class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-800 text-slate-200">Skill: b2b-linkedin-meta-ghostwriter</span>
+          </div>
+          <p id="socTip" class="text-xs text-slate-400"></p>
+          <pre id="socPrompt" class="p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-200 whitespace-pre-wrap font-mono"></pre>
+          <button id="socCopyBtn" class="px-4 py-2 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500 cursor-pointer">
+            📋 Copia Prompt Social
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: ECOSISTEMA & WORKFLOW REALI -->
+    <section id="tab-ecosystem" class="tab-panel hidden space-y-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
+        <div>
+          <h2 class="text-lg font-bold text-white">🗺️ Mappa Completa del Tuo Ecosistema &amp; Funzioni Nascoste</h2>
+          <p class="text-sm text-slate-400 mt-1">
+            Tutto ciò che hai costruito finora tra Drive, GitHub e SyntoDesk, unito alle funzioni avanzate di Antigravity che forse ancora non sfrutti al 100%.
+          </p>
+        </div>
+
+        <h3 class="text-sm font-bold uppercase tracking-wider text-blue-400">1. I Tuoi Progetti &amp; Workflow Reali (Scansionati da Drive &amp; GitHub)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-sm text-white">🏛️ SyntoDesk Core Suite</div>
+            <p class="text-slate-400">CRM Pipeline a 5 fasi, Speed-to-Lead, Brand Kit multi-cliente, CMS Web Updater e Dashboard PED.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-sm text-white">💬 WhatsApp Gateway &amp; Automazioni</div>
+            <p class="text-slate-400">Server Node/Docker dedicato per notifiche istantanee, flussi Zapier/Make e centralini vocali.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-sm text-white">🎨 Studio Caroselli &amp; Teleprompter</div>
+            <p class="text-slate-400">Generatore caroselli 4:5 e PDF LinkedIn, Video Brander, copertine Reel e gobbo Teleprompter.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-sm text-white">🏥 Verticale MedTech &amp; Voucher</div>
+            <p class="text-slate-400">Funnel cliniche/centri estetici (MedPharm, Centro Psyche), simulatore ROI e contratti partnership.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-sm text-white">📊 Governance, Bandi &amp; GDPR</div>
+            <p class="text-slate-400">Business Plan Invitalia Smart&amp;Start, contratti MSA/SLA, perizie R&amp;D e conformità EU AI Act / GDPR.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-sm text-white">🧠 Antigravity Boardroom</div>
+            <p class="text-slate-400">Repository GitHub dedicato per simulazioni strategiche e tavoli decisionali multi-ruolo.</p>
+          </div>
+        </div>
+
+        <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-400 pt-2">2. Tutto il Potenziale di Antigravity (Funzioni Avanzate)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <div class="font-bold text-sm text-white">🕵️ Subagente `research` (Risparmia Token!)</div>
+            <p class="text-slate-400">Quando devi far leggere 20 file o fare ricerche lunghe, chiedi: <em>"Usa un subagente research per cercare X"</em>. Mantiene pulita la chat principale senza intasarla di token.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <div class="font-bold text-sm text-white">⏳ Task Asincroni in Background</div>
+            <p class="text-slate-400">L'AI può lanciare scansioni lunghe su Drive, test automatici o script Python in background e avvisarti appena ha finito.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <div class="font-bold text-sm text-white">👁️ Lettura Diretta di Screenshot &amp; PDF</div>
+            <p class="text-slate-400">Carica uno screenshot di un errore, di una grafica o di una dashboard concorrente: l'AI vede i pixel reali e ti propone la modifica esatta.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <div class="font-bold text-sm text-white">⚡ Pipeline Google Workspace End-to-End</div>
+            <p class="text-slate-400">Legge un foglio Sheets → incrocia i dati con un PDF su Drive → controlla la tua agenda Calendar → crea il preventivo su Docs e la presentazione su Slides in un unico flusso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MODELS -->
     <section id="tab-models" class="tab-panel hidden space-y-4">
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
         <h2 class="text-lg font-bold text-white mb-1">Quale Modello scegliere nel menu?</h2>
@@ -153,19 +275,19 @@
                 <td class="py-3.5 pr-4 font-semibold text-white">Claude Sonnet 5.5</td>
                 <td class="py-3.5 pr-4">Consulente Senior &amp; Dev</td>
                 <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-amber-500/20 text-amber-300">🟡 Medio</span></td>
-                <td class="py-3.5"><strong>Scelta #1 nel 90% dei casi.</strong> Siti web, email B2B, strategie, debug preciso senza rompere nulla.</td>
+                <td class="py-3.5"><strong>Scelta #1 nel 90% dei casi.</strong> Siti web, copy social/B2B, ricerche strategiche, debug preciso senza rompere nulla.</td>
               </tr>
               <tr>
                 <td class="py-3.5 pr-4 font-semibold text-white">Gemini 3.8 Flash</td>
                 <td class="py-3.5 pr-4">Assistente Veloce</td>
                 <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-emerald-500/20 text-emerald-300">🟢 Minimo</span></td>
-                <td class="py-3.5">Domande rapide, riassunti PDF, ricerche web, lettura file Google Drive e gestione Calendar.</td>
+                <td class="py-3.5">Domande rapide, riassunti PDF, ricerche web veloci, lettura file Google Drive e gestione Calendar.</td>
               </tr>
               <tr>
                 <td class="py-3.5 pr-4 font-semibold text-white">Claude Opus 5.5</td>
                 <td class="py-3.5 pr-4">Direttore Tecnico</td>
                 <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-rose-500/20 text-rose-300">🔴 Molto Alto</span></td>
-                <td class="py-3.5">Solo per problemi logici estremi dove Sonnet si blocca.</td>
+                <td class="py-3.5">Solo per problemi logici estremi o ricerche di mercato multi-documento molto complesse.</td>
               </tr>
               <tr>
                 <td class="py-3.5 pr-4 font-semibold text-white">Orchestrator (Gemini 4 Neon Extra)</td>
@@ -185,42 +307,55 @@
       </div>
     </section>
 
-    <!-- TAB 3: ALL COMMANDS -->
+    <!-- TAB 5: ALL COMMANDS -->
     <section id="tab-commands" class="tab-panel hidden space-y-6">
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
         <div>
           <h2 class="text-lg font-bold text-white">⚡ Tutti i Comandi Slash (`/`) Ufficiali</h2>
-          <p class="text-sm text-slate-400">Questi sono TUTTI i 4 comandi `/` nativi di Antigravity.</p>
+          <p class="text-sm text-slate-400">Questi sono tutti i comandi `/` nativi di Antigravity.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="commandsGrid"></div>
       </div>
 
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
         <div>
-          <h2 class="text-lg font-bold text-white">🧰 Funzioni &amp; Superpoteri Nativi (Senza Slash)</h2>
-          <p class="text-sm text-slate-400">Oltre ai comandi `/`, Antigravity esegue queste azioni dirette quando gliele chiedi in italiano:</p>
+          <h2 class="text-lg font-bold text-white">🧰 Comandi Operativi Diretti (Senza Slash)</h2>
+          <p class="text-sm text-slate-400">Azioni potenti che Antigravity attiva automaticamente scrivendole in chat:</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <div class="font-bold text-sm text-white">📊 Ricerca di Mercato Verificata</div>
+            <p class="text-slate-400">Attiva `market-research-verified-trends`: incrocia web e Drive estraendo solo fonti certe con link e date.</p>
+          </div>
           <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
             <div class="font-bold text-sm text-white">🎨 Genera Immagini</div>
             <p class="text-slate-400">Crea grafiche, mockup UI, copertine o asset visivi su misura direttamente in chat.</p>
           </div>
           <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
-            <div class="font-bold text-sm text-white">🌐 Ricerca Web &amp; Lettura Link</div>
-            <p class="text-slate-400">Naviga siti web, legge pagine di concorrenti, verifica indicizzazione su Google.</p>
+            <div class="font-bold text-sm text-white">🕵️ Delega a Subagente Research</div>
+            <p class="text-slate-400">Esplora cartelle enormi o siti in background senza appesantire la chat principale.</p>
           </div>
           <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
-            <div class="font-bold text-sm text-white">💻 Esecuzione Script &amp; Test</div>
-            <p class="text-slate-400">Esegue script Python/Node, testa pagine web e crea file pronti da scaricare.</p>
+            <div class="font-bold text-sm text-white">🌐 Lettura Live di Link &amp; Competitor</div>
+            <p class="text-slate-400">Incolla qualsiasi URL: legge l'intera pagina ed estrae offerte, prezzi e struttura SEO.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <div class="font-bold text-sm text-white">💻 Test &amp; Script Automatici</div>
+            <p class="text-slate-400">Scrive ed esegue script Python/Node per automatizzare conversioni file, CSV e verifiche.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <div class="font-bold text-sm text-white">❓ Intervista Guidata (`ask_question`)</div>
+            <p class="text-slate-400">Chiedigli di farti domande a scelta multipla per decidere insieme la strategia migliore.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TAB 4: SKILLS -->
+    <!-- TAB 6: SKILLS (12) -->
     <section id="tab-skills" class="tab-panel hidden space-y-4">
       <div class="flex flex-wrap gap-2">
-        <button data-cat="all" class="skill-filter px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white cursor-pointer">Tutte (10)</button>
+        <button data-cat="all" class="skill-filter px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white cursor-pointer">Tutte (12)</button>
+        <button data-cat="biz" class="skill-filter px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 cursor-pointer">📊 Ricerca &amp; Marketing</button>
         <button data-cat="web" class="skill-filter px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 cursor-pointer">🌐 Web &amp; SEO</button>
         <button data-cat="google" class="skill-filter px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 cursor-pointer">📁 Google Workspace</button>
         <button data-cat="tech" class="skill-filter px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 cursor-pointer">⚙️ Tecniche</button>
@@ -228,12 +363,12 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="skillsGrid"></div>
     </section>
 
-    <!-- TAB 5: SKILL BUILDER -->
+    <!-- TAB 7: SKILL BUILDER -->
     <section id="tab-builder" class="tab-panel hidden space-y-6">
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
         <div>
           <h2 class="text-lg font-bold text-white">🧩 Crea nuove Skill permanenti</h2>
-          <p class="text-sm text-slate-400 mt-1">Trasforma un compito ripetitivo in un superpotere fisso di Antigravity.</p>
+          <p class="text-sm text-slate-400 mt-1">Trasforma qualsiasi procedura ricorrente in una nuova Skill salvata nel tuo profilo Antigravity.</p>
         </div>
         <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -262,12 +397,12 @@
       </div>
     </section>
 
-    <!-- TAB 6: BUG & ERRORI -->
+    <!-- TAB 8: BUG & ERRORI -->
     <section id="tab-debug" class="tab-panel hidden space-y-6">
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
         <div>
           <h2 class="text-lg font-bold text-white">🚑 Protocollo "Segnalazione Bug Chirurgica"</h2>
-          <p class="text-sm text-slate-400 mt-1">Evita che l'AI riscriva tutto il sito da capo rompendo cose che funzionavano.</p>
+          <p class="text-sm text-slate-400 mt-1">Evita che l'AI riscriva tutto il sito da capo rompendo parti che funzionavano.</p>
         </div>
         <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -292,42 +427,42 @@
       </div>
     </section>
 
-    <!-- TAB 7: SYNC & EXTERNAL APPS -->
+    <!-- TAB 9: SYNC & APP -->
     <section id="tab-apps" class="tab-panel hidden space-y-6">
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
         <div>
-          <h2 class="text-lg font-bold text-white">🔄 Come tenere questa WebApp sempre aggiornata</h2>
+          <h2 class="text-lg font-bold text-white">🔄 Sincronizzazione con Antigravity &amp; App Esterne</h2>
           <p class="text-sm text-slate-400 mt-1">
-            Per sicurezza, un sito su Vercel non può leggere da solo dentro il tuo account Google Antigravity. Ma puoi sincronizzarlo in <strong>10 secondi</strong> con il comando qui sotto ogni volta che vedi una novità!
+            Ogni volta che Google Antigravity riceve aggiornamenti, nuovi modelli o nuove Skill, incolla questo comando in una chat per aggiornare automaticamente questa WebApp su Vercel e su Drive:
           </p>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-          <div class="font-bold text-sm text-blue-400">1. Comando di Sincronizzazione Totale (Copia e incolla in Antigravity)</div>
-          <pre class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-200 whitespace-pre-wrap font-mono">Controlla tutte le Skill, i Plugin e i Comandi attualmente attivi nel mio ambiente Antigravity. Confrontali con il file index.html nel repository GitHub "vincenzofalace/guida-antigravity-360". Aggiorna il file con le eventuali novità, aggiorna la data di sync, fai push su GitHub (così Vercel si aggiorna) e aggiorna anche la copia su Google Drive (ID: 1h_kSN3c12K03TCmY4e7mD9sys3_ocaXs).</pre>
-          <button class="copy-dynamic mt-1 px-4 py-2 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500 cursor-pointer" data-copy='Controlla tutte le Skill, i Plugin e i Comandi attualmente attivi nel mio ambiente Antigravity. Confrontali con il file index.html nel repository GitHub "vincenzofalace/guida-antigravity-360". Aggiorna il file con le eventuali novità, aggiorna la data di sync, fai push su GitHub (così Vercel si aggiorna) e aggiorna anche la copia su Google Drive (ID: 1h_kSN3c12K03TCmY4e7mD9sys3_ocaXs).'>
+          <div class="font-bold text-sm text-blue-400">Comando Unico di Aggiornamento Totale</div>
+          <pre class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-200 whitespace-pre-wrap font-mono">Scansiona tutte le Skill, i Plugin, i Comandi slash e i nuovi progetti attualmente presenti nel mio ambiente Antigravity e su Google Drive. Confrontali con il file index.html del repository GitHub "vincenzofalace/guida-antigravity-360". Aggiorna la piattaforma aggiungendo ogni novità, aggiorna la data di sync nell'intestazione, fai push su GitHub (per aggiornare Vercel) e aggiorna la copia su Google Drive (ID: 1h_kSN3c12K03TCmY4e7mD9sys3_ocaXs).</pre>
+          <button class="copy-dynamic mt-1 px-4 py-2 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500 cursor-pointer" data-copy='Scansiona tutte le Skill, i Plugin, i Comandi slash e i nuovi progetti attualmente presenti nel mio ambiente Antigravity e su Google Drive. Confrontali con il file index.html del repository GitHub "vincenzofalace/guida-antigravity-360". Aggiorna la piattaforma aggiungendo ogni novità, aggiorna la data di sync nell&#39;intestazione, fai push su GitHub (per aggiornare Vercel) e aggiorna la copia su Google Drive (ID: 1h_kSN3c12K03TCmY4e7mD9sys3_ocaXs).'>
             📋 Copia Comando di Sync Automatico
           </button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-            <div class="font-bold text-sm text-white">🔌 App collegabili direttamente (Plugin)</div>
-            <p class="text-xs text-slate-400">Google Drive, Docs, Sheets, Slides, Calendar, GitHub (+ eventuali nuovi plugin dal pannello Customizations).</p>
+            <div class="font-bold text-sm text-white">🔌 Plugin Nativi Attivi</div>
+            <p class="text-xs text-slate-400">Google Drive, Docs, Sheets, Slides, Calendar e GitHub (gestiti dalle impostazioni Customizations di Antigravity).</p>
           </div>
           <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">
-            <div class="font-bold text-sm text-white">⚙️ App collegabili via n8n / Make / API</div>
-            <p class="text-xs text-slate-400">WhatsApp Business, Brevo/ActiveCampaign, Stripe, Fatture in Cloud, Retell AI (chiamate), Telegram Bot.</p>
+            <div class="font-bold text-sm text-white">⚙️ Ponte App Esterne (n8n / Make / API)</div>
+            <p class="text-xs text-slate-400">WhatsApp Gateway, Brevo, Stripe, Fatture in Cloud, Retell AI (chiamate), Metricool, Telegram Bot.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TAB 8: TOKENS -->
+    <!-- TAB 10: TOKENS -->
     <section id="tab-tokens" class="tab-panel hidden space-y-6">
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
         <h2 class="text-lg font-bold text-white">Simulatore Consumo Token</h2>
-        <p class="text-sm text-slate-400">Ad ogni messaggio l'AI rilegge tutta la chat. Ecco perché conviene aprire chat nuove e pulite.</p>
+        <p class="text-sm text-slate-400">Ad ogni messaggio l'AI rilegge tutta la chat. Apri una nuova chat quando superi i 25-30 messaggi.</p>
         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
           <label class="text-sm font-medium flex-1 text-slate-300">
             Lunghezza della chat: <span id="msgCountLabel" class="font-bold text-blue-400">10 messaggi</span>
@@ -347,37 +482,377 @@
   </div>
 
   <script>
+    // --- ALL 24 SCENARIOS ---
     const defaultGoals = [
-      // SITI, SEO & BUG
-      { id: "site", cat: "web", title: "🌐 Creare / Modificare un Sito", sub: "Landing page, restyling, dashboard", model: "Claude Sonnet 5.5", cmd: "/plan", cost: "Medio", why: "Sonnet 5.5 è il migliore per codice pulito e design. /plan ti mostra la struttura prima di scrivere codice.", prompt: "/plan Dobbiamo creare una landing page moderna per [NOME CLIENTE]. Target: [CHI COMPRA]. Obiettivo: [PRENOTARE CALL]. Prima di creare file, proponimi la struttura delle sezioni e i testi. Aspetta il mio OK." },
-      { id: "seo", cat: "web", title: "🔍 Audit SEO & AI di un Cliente", sub: "Verifica Google, ChatGPT, Schema.org", model: "Claude Sonnet 5.5", cmd: "Skill: seo-aeo-geo-site-audit", cost: "Medio", why: "Controlla indicizzazione su Google e motori AI (ChatGPT/Perplexity) e sistema subito robots.txt, sitemap e dati strutturati.", prompt: "Usa la skill seo-aeo-geo-site-audit sul sito presente in questo workspace. Verifica se un cliente che ci cerca oggi su Google o su ChatGPT ci trova davvero, elenca cosa manca e crea/aggiorna subito i file tecnici mancanti." },
-      { id: "bug", cat: "web", title: "🚑 Risolvere un Errore / Bug", sub: "Qualcosa non funziona in una web app", model: "Claude Sonnet 5.5", cmd: "Modalità Chirurgica", cost: "Basso", why: "Impedisce all'AI di riscrivere tutto il sito da zero e la obbliga a correggere solo la riga rotta.", prompt: "NON riscrivere tutto il file da capo. In [NOME PAGINA/FILE] succede questo problema: [COSA SUCCEDE / ERRORE ROSSO CONSOLE F12]. Invece doveva: [COSA DOVEVA FARE]. Trova la causa esatta, spiegamela in 2 righe, correggi SOLO quella parte e aggiungi un controllo affinché non ricapiti." },
-      { id: "deploy", cat: "web", title: "🚀 Salvare & Mettere Online", sub: "Push su GitHub e deploy Vercel", model: "Claude Sonnet 5.5", cmd: "Skill: github", cost: "Basso", why: "Salva in sicurezza il lavoro su GitHub attivando l'aggiornamento automatico su Vercel.", prompt: "Controlla che non ci siano errori nei file modificati in questa sessione, fai commit e push sul repository GitHub con un messaggio chiaro che descrive le modifiche fatte." },
+      // RICERCHE & STRATEGIA
+      {
+        id: "market_research",
+        cat: "research",
+        title: "📊 Ricerca di Mercato & Trend (Fonti Certe)",
+        sub: "Evoluzione storica fino ad oggi, zero dati inventati",
+        tags: "mercato trend statistiche dati ricerca evoluzione fonti report istat eurostat settore analisi domanda",
+        model: "Claude Sonnet 5.5",
+        cmd: "Skill: market-research-verified-trends",
+        cost: "Medio",
+        why: "Usa la nuova skill permanente che incrocia Web Live + tuoi documenti su Drive, ricostruisce l'evoluzione storica fino ad oggi ed estrae SOLO numeri con fonte, data e link verificabile.",
+        prompt: "Usa la skill market-research-verified-trends per analizzare in profondità il mercato/trend: \"[INSERISCI SETTORE O TEMA]\".\nRichieste obbligatorie:\n1. Verifica prima eventuali documenti già presenti nel mio Drive/workspace.\n2. Ricostruisci tutta l'evoluzione storica del fenomeno fino alla data odierna.\n3. Estrai ESCLUSIVAMENTE dati numerici, statistiche e fatti da fonti primarie certe (riportando sempre Fonte, Anno e Link URL).\n4. Niente stime inventate: se un dato non esiste scrivi 'Dato non disponibile'.\n5. Chiudi con opportunità pratiche e modello di monetizzazione."
+      },
+      {
+        id: "competitor",
+        cat: "research",
+        title: "🕵️ Analisi Competitor & Mercato",
+        sub: "Spia offerte, prezzi, posizionamento e debolezze",
+        tags: "concorrenti competitor spy prezzi confronto analisi sito",
+        model: "Gemini 3.8 Flash",
+        cmd: "Ricerca Web + Browse",
+        cost: "Minimo",
+        why: "Gemini Flash legge i siti dei concorrenti in tempo reale a costo bassissimo.",
+        prompt: "Analizza il sito web del concorrente [URL SITO] e confrontalo con la nostra offerta [DESCRIVI]. Restituisci una tabella sintetica con: 1) Punti di forza loro, 2) Punti deboli/mancanze, 3) Prezzi rilevati, 4) 3 leve commerciali per batterli."
+      },
+      {
+        id: "idea",
+        cat: "research",
+        title: "💡 Progettare Nuovo Business (Filtro Anti-Fuffa)",
+        sub: "Domande critiche su ROI, budget e costi reali",
+        tags: "nuova idea startup business model roi costi fattibilità",
+        model: "Claude Sonnet 5.5",
+        cmd: "/grill-me",
+        cost: "Basso",
+        why: "Ti fa 4 domande chirurgiche su monetizzazione, budget e rischi prima di farti spendere un euro.",
+        prompt: "/grill-me Voglio lanciare questo servizio/progetto: [DESCRIVI IDEA IN 2 RIGHE]. Agisci da Chief System Architect: fammi 4 domande critiche su ROI, budget e rischi prima di progettare l'infrastruttura."
+      },
+      {
+        id: "finance_bandi",
+        cat: "research",
+        title: "💶 Business Plan, Bandi & Governance",
+        sub: "Invitalia, Smart&Start, contratti MSA/SLA, GDPR",
+        tags: "finanza bandi invitalia smart start contratti gdpr ai act legale budget",
+        model: "Claude Sonnet 5.5",
+        cmd: "Skill: gdrive + gdocs",
+        cost: "Medio",
+        why: "Si collega ai tuoi documenti di Governance su Drive per redigere business plan, analisi costi/ricavi o checklist GDPR/AI Act.",
+        prompt: "Cerca su Google Drive nella cartella '01_SyntoDesk_Governance_Finance' i nostri riferimenti esistenti e aiutami a preparare [BUSINESS PLAN / ANALISI COSTI / CHECKLIST GDPR] per [PROGETTO]. Usa solo numeri realistici."
+      },
 
-      // AUTOMAZIONI & WHATSAPP
-      { id: "whatsapp", cat: "automations", title: "💬 Automatizzare WhatsApp Business", sub: "Risposte automatiche, lead & conferme", model: "Claude Sonnet 5.5", cmd: "/grill-me", cost: "Basso", why: "Progetta il flusso tra il tuo sito/modulo contatti, n8n/Make e WhatsApp Business API senza ban.", prompt: "/grill-me Voglio automatizzare WhatsApp per [TIPO DI ATTIVITÀ] per [OBIETTIVO: es. confermare appuntamenti / rispondere ai lead]. Fammi 4 domande critiche su volumi, budget e strumenti prima di disegnare l'architettura su n8n/Make." },
-      { id: "sito_auto", cat: "automations", title: "⚡ Automatizzare un Sito Web", sub: "Form → CRM → Email → Notifica Telegram", model: "Claude Sonnet 5.5", cmd: "/plan", cost: "Medio", why: "Collega il modulo contatti del sito a Google Sheets, email automatiche (Brevo) e avvisi istantanei sul tuo telefono.", prompt: "/plan Voglio collegare il modulo contatti del sito [NOME SITO] in modo che ogni nuovo lead venga salvato su Google Sheets, riceva un'email di benvenuto e mi mandi un avviso su Telegram/Email. Progetta la soluzione più economica." },
-      { id: "voice", cat: "automations", title: "📞 Centralino AI Fuori Orario", sub: "Risponditore telefonico + link WhatsApp", model: "Claude Sonnet 5.5", cmd: "/grill-me", cost: "Basso", why: "Imposta un agente vocale (Retell AI + n8n) che risponde quando lo studio è chiuso e manda subito il link calendario.", prompt: "/grill-me Voglio proporre a uno studio [SETTORE] un risponditore telefonico AI per le chiamate perse fuori orario. Aiutami a definire costi reali al minuto, margini e architettura." },
+      // SITI, SEO & BUG
+      {
+        id: "site",
+        cat: "web",
+        title: "🌐 Creare / Modificare un Sito o WebApp",
+        sub: "Landing page, restyling, dashboard e brand kit",
+        tags: "sito web landing page html nextjs react grafica ui design",
+        model: "Claude Sonnet 5.5",
+        cmd: "/plan + web-app-development",
+        cost: "Medio",
+        why: "/plan ti mostra la struttura prima di scrivere codice, evitando errori di impaginazione.",
+        prompt: "/plan Dobbiamo creare una landing page moderna per [NOME CLIENTE]. Target: [CHI COMPRA]. Obiettivo: [PRENOTARE CALL / LEAD]. Prima di creare file, proponimi la struttura delle sezioni e i testi. Aspetta il mio OK."
+      },
+      {
+        id: "seo",
+        cat: "web",
+        title: "🔍 Audit SEO, AEO & GEO (Google + AI)",
+        sub: "Verifica indicizzazione Google, ChatGPT, Schema.org",
+        tags: "seo google visibilità chatgpt perplexity schema robots sitemap traffico",
+        model: "Claude Sonnet 5.5",
+        cmd: "Skill: seo-aeo-geo-site-audit",
+        cost: "Medio",
+        why: "Controlla visibilità reale su Google e motori AI e interviene subito sul codice mancante.",
+        prompt: "Usa la skill seo-aeo-geo-site-audit sul sito presente in questo workspace. Verifica se un cliente che ci cerca oggi su Google o su ChatGPT ci trova davvero, elenca cosa manca e crea/aggiorna subito i file tecnici mancanti."
+      },
+      {
+        id: "bug",
+        cat: "web",
+        title: "🚑 Risolvere un Errore / Bug Chirurgico",
+        sub: "Corregge la riga rotta senza distruggere il resto",
+        tags: "errore bug non funziona rotto console f12 pagina bianca crash fix",
+        model: "Claude Sonnet 5.5",
+        cmd: "Modalità Chirurgica",
+        cost: "Basso",
+        why: "Impedisce all'AI di riscrivere tutto il progetto da capo.",
+        prompt: "NON riscrivere tutto il file da capo e NON toccare le altre funzioni. In [NOME PAGINA/FILE] succede questo problema: [COSA SUCCEDE / ERRORE ROSSO CONSOLE F12]. Invece doveva: [COSA DOVEVA FARE]. Trova la causa esatta, spiegamela in 2 righe, correggi SOLO quella parte e aggiungi un controllo affinché non ricapiti."
+      },
+      {
+        id: "deploy",
+        cat: "web",
+        title: "🚀 Salvare & Mettere Online (GitHub / Vercel)",
+        sub: "Commit sicuro e aggiornamento automatico sito",
+        tags: "pubblicare online github vercel push deploy salvataggio",
+        model: "Claude Sonnet 5.5",
+        cmd: "Skill: github",
+        cost: "Basso",
+        why: "Salva le modifiche su GitHub attivando l'aggiornamento live su Vercel.",
+        prompt: "Controlla che non ci siano errori nei file modificati in questa sessione, fai commit e push sul repository GitHub con un messaggio chiaro che descrive le modifiche fatte."
+      },
+
+      // AUTOMAZIONI & CRM
+      {
+        id: "whatsapp",
+        cat: "automations",
+        title: "💬 Automatizzare WhatsApp Business",
+        sub: "Gateway, risposte automatiche, conferme appuntamenti",
+        tags: "whatsapp wa messaggi bot notifiche conferme clienti",
+        model: "Claude Sonnet 5.5",
+        cmd: "/grill-me",
+        cost: "Basso",
+        why: "Progetta l'integrazione tra il tuo WhatsApp Gateway / n8n e il sito senza rischiare il ban del numero.",
+        prompt: "/grill-me Voglio automatizzare WhatsApp per [ATTIVITÀ/CLIENTE] per [OBIETTIVO: es. confermare appuntamenti / inviare preventivi / avvisi lead]. Fammi 4 domande critiche su volumi, budget e strumenti prima di disegnare il flusso."
+      },
+      {
+        id: "sito_auto",
+        cat: "automations",
+        title: "⚡ Automatizzare un Sito Web (Form → CRM)",
+        sub: "Modulo contatti → Sheets → Brevo → Notifica Telegram",
+        tags: "automazione webhook n8n make zapier form lead email brevo crm",
+        model: "Claude Sonnet 5.5",
+        cmd: "/plan",
+        cost: "Medio",
+        why: "Elimina il copia-incolla manuale applicando la regola Speed-to-Lead.",
+        prompt: "/plan Voglio collegare il modulo contatti del sito [NOME SITO] in modo che ogni nuovo lead venga salvato su Google Sheets/CRM, riceva un'email automatica e invii un avviso istantaneo su Telegram/WhatsApp. Progetta la soluzione più economica e affidabile."
+      },
+      {
+        id: "crm_pipeline",
+        cat: "automations",
+        title: "📈 Architettura CRM & Speed-to-Lead",
+        sub: "Pipeline a 5 fasi, regola dei 3 clic, recupero preventivi",
+        tags: "crm pipeline vendite preventivi lead follow up gestione clienti",
+        model: "Claude Sonnet 5.5",
+        cmd: "/plan",
+        cost: "Medio",
+        why: "Progetta un CRM snello che i venditori usano davvero senza abbandonarlo dopo 60 giorni.",
+        prompt: "/plan Progetta una pipeline CRM a 5 fasi oggettive per [SETTORE CLIENTE] con automazione di follow-up per i preventivi fermi e notifiche entro 15 minuti dall'arrivo del lead."
+      },
+      {
+        id: "voice",
+        cat: "automations",
+        title: "📞 Centralino AI Fuori Orario",
+        sub: "Risponditore telefonico AI (Retell + n8n + link WhatsApp)",
+        tags: "telefono chiamate voce agente vocale giulia segretaria retell vapi",
+        model: "Claude Sonnet 5.5",
+        cmd: "/grill-me",
+        cost: "Basso",
+        why: "Recupera le chiamate perse a studio chiuso inviando via SMS/WhatsApp il link di prenotazione senza errori di spelling.",
+        prompt: "/grill-me Voglio proporre a [SETTORE, es. studio medico/estetico] un risponditore telefonico AI solo per chiamate perse/fuori orario. Aiutami a definire costi reali al minuto, margini e flusso sicuro GDPR."
+      },
 
       // VIDEO & IMMAGINI
-      { id: "images", cat: "media", title: "🎨 Creare Immagini & Grafiche UI", sub: "Copertine, mockup, asset per siti/social", model: "Claude Sonnet 5.5", cmd: "Funzione: generate_image", cost: "Basso", why: "Antigravity genera immagini direttamente in chat senza uscire su altri tool.", prompt: "Genera un'immagine professionale in formato [16:9 / 1:1 / 9:16] per [DOVE VA USATA: es. copertina sito / post LinkedIn]. Stile: moderno, minimalista, colori [COLORI], soggetto: [DESCRIVI COSA MOSTRARE]. Nessun testo distorto." },
-      { id: "video_script", cat: "media", title: "🎬 Script Video, Reel & Demo", sub: "Copioni ad alta conversione + storyboard", model: "Claude Sonnet 5.5", cmd: "Chat Normale", cost: "Basso", why: "Per vendere nel B2B convertono 10x i video reali o screen-recording con gancio forte, non gli avatar finti.", prompt: "Scrivi il copione per un video breve (massimo 60 secondi) per [PIATTAFORMA: LinkedIn / Instagram / Loom demo]. Obiettivo: mostrare [PRODOTTO/RISULTATO] a [TARGET]. Dammi: 1) Gancio nei primi 3 secondi, 2) Cosa mostrare sullo schermo mentre parlo, 3) Call to Action finale." },
-      { id: "calc", cat: "media", title: "📊 Calcolatori ROI & Widget Visivi", sub: "Strumenti interattivi per le call", model: "Claude Sonnet 5.5", cmd: "Skill: generative_ui", cost: "Medio", why: "Trasforma numeri noiosi in uno strumento cliccabile da mostrare dal vivo ai clienti.", prompt: "Usa la skill generative_ui per crearmi un calcolatore interattivo di ROI per [SETTORE CLIENTE]: inserendo [VARIABILE 1] e [VARIABILE 2], mostra quanto guadagna in più al mese con il nostro servizio." },
+      {
+        id: "images",
+        cat: "media",
+        title: "🎨 Creare Immagini & Mockup UI",
+        sub: "Copertine, banner, visual brand direttamente in chat",
+        tags: "immagini foto grafica copertina banner logo mockup design",
+        model: "Claude Sonnet 5.5",
+        cmd: "Funzione: generate_image",
+        cost: "Basso",
+        why: "Genera asset visivi su misura senza aprire tool esterni.",
+        prompt: "Genera un'immagine professionale in formato [16:9 / 1:1 / 4:5 / 9:16] per [DOVE VA USATA]. Stile: moderno, pulito, colori [COLORI], soggetto: [DESCRIVI COSA MOSTRARE]. Evita testi distorti nell'immagine."
+      },
+      {
+        id: "video_script",
+        cat: "media",
+        title: "🎬 Script Video, Reel & Teleprompter",
+        sub: "Copioni 45-60s pronti per registrare col cellulare",
+        tags: "video reel tiktok shorts youtube teleprompter copione script loom demo",
+        model: "Claude Sonnet 5.5",
+        cmd: "Skill: b2b-linkedin-meta-ghostwriter",
+        cost: "Basso",
+        why: "Crea copioni ad alto impatto con Gancio 3s, dimostrazione pratica e CTA che converte.",
+        prompt: "Usa la skill b2b-linkedin-meta-ghostwriter per scrivermi il copione Teleprompter di un video (45-60s) su [ARGOMENTO]. Dammi: Hook (0-5s), Sviluppo e cosa mostrare sullo schermo (5-35s), CTA finale con parola chiave commento."
+      },
+      {
+        id: "carousel",
+        cat: "media",
+        title: "🖼️ Caroselli 4:5 & PDF Multi-Pagina",
+        sub: "Sequenza di 6 slide pronte per Studio Caroselli",
+        tags: "carosello slide instagram linkedin pdf grafica presentazione",
+        model: "Claude Sonnet 5.5",
+        cmd: "Skill: b2b-linkedin-meta-ghostwriter",
+        cost: "Basso",
+        why: "Genera testo slide-by-slide strutturato per convertire e salvare il post.",
+        prompt: "Crea un carosello di 6 slide (Cover, Problema, Dati/Verità, Framework in 3 punti, Regola d'oro, CTA finale) sul tema: \"[ARGOMENTO]\". Testi brevi e incisivi pronti da incollare in grafico/Studio Caroselli."
+      },
+      {
+        id: "calc",
+        cat: "media",
+        title: "📊 Calcolatori ROI & Dashboard Interattive",
+        sub: "Tool cliccabili da mostrare dal vivo ai clienti",
+        tags: "calcolatore roi grafico widget dashboard interattiva call vendita",
+        model: "Claude Sonnet 5.5",
+        cmd: "Skill: generative_ui",
+        cost: "Medio",
+        why: "Trasforma numeri astratti in una prova visiva immediata durante le trattative.",
+        prompt: "Usa la skill generative_ui per creare un calcolatore interattivo di ROI per [SETTORE CLIENTE]: inserendo [VARIABILE 1] e [VARIABILE 2], mostra quanto risparmia o guadagna in più al mese."
+      },
 
-      // BUSINESS, TEAM & VENDITE
-      { id: "idea", cat: "business", title: "💡 Progettare un Nuovo Business", sub: "Filtro anti-fuffa e costi reali", model: "Claude Sonnet 5.5", cmd: "/grill-me", cost: "Basso", why: "Ti fa 4 domande chirurgiche su monetizzazione, budget e rischi prima di farti spendere un euro.", prompt: "/grill-me Voglio lanciare questo servizio/progetto: [DESCRIVI IDEA IN 2 RIGHE]. Agisci da Chief Architect: fammi 4 domande critiche su ROI, budget e rischi prima di progettare l'infrastruttura." },
-      { id: "teamwork", cat: "business", title: "👥 Creare un Team di Agenti", sub: "Squadra parallela (/teamwork) max 3 bot", model: "Orchestrator / Sonnet 5.5", cmd: "/teamwork", cost: "🔴 Alto", why: "Usa massimo 3 agenti con pausa di approvazione dopo il piano iniziale per evitare sprechi di token.", prompt: "/teamwork Dobbiamo realizzare questo progetto complesso: [DESCRIVI OBIETTIVO]. Crea una squadra snella di MASSIMO 3 agenti:\n1) Ricercatore\n2) Produttore\n3) Revisore Qualità.\nFermatevi e chiedetemi il mio OK dopo il piano iniziale prima di produrre i file." },
-      { id: "offer", cat: "business", title: "✉️ Scrivere Offerte & Email B2B", sub: "Copy persuasivo senza toni da bot", model: "Claude Sonnet 5.5", cmd: "Chat Normale", cost: "Basso", why: "Dagli sempre un limite di parole preciso e un destinatario reale.", prompt: "Sei un consulente B2B esperto. Scrivi un'email commerciale breve (massimo 120 parole) indirizzata al titolare di [TIPO AZIENDA] per proporgli [SERVIZIO]. Tono diretto, zero fuffa, chiudi proponendo una call di 15 minuti." },
-      { id: "competitor", cat: "business", title: "🕵️ Analisi Competitor & Mercato", sub: "Spia offerte, prezzi e punti deboli", model: "Gemini 3.8 Flash", cmd: "Ricerca Web", cost: "Minimo", why: "Gemini Flash cerca sul web in tempo reale a costo bassissimo.", prompt: "Analizza il sito web del concorrente [URL SITO] e confrontalo con la nostra offerta [DESCRIVI]. Restituisci una tabella sintetica con: 1) Punti di forza loro, 2) Punti deboli loro, 3) 3 leve per batterli." },
-      { id: "social", cat: "business", title: "📱 Post LinkedIn & Caroselli", sub: "Contenuti d'autorità con casi studio", model: "Claude Sonnet 5.5", cmd: "Chat Normale", cost: "Basso", why: "Trasforma un tuo risultato o pensiero in un post professionale in italiano naturale.", prompt: "Trasforma questo risultato/idea: \"[INCOLLA]\" in un post LinkedIn B2B. Struttura: Gancio forte, Problema reale, Soluzione con numeri, Domanda finale. Max 1.200 caratteri, tono diretto." },
-      { id: "docs", cat: "business", title: "📑 Creare Preventivi & Slide", sub: "Google Docs, Slides e Sheets", model: "Claude Sonnet 5.5", cmd: "Skill: gdocs / gslides / gsheets", cost: "Medio", why: "Crea il documento direttamente nel tuo Google Workspace pronto da inviare.", prompt: "Usa la skill [gdocs / gslides / gsheets] per creare un nuovo file chiamato \"[TITOLO]\" con questi dati: [INCOLLA]. Impaginalo in modo professionale e dammi il link." },
+      // VENDITE, TEAM & DOCS
+      {
+        id: "teamwork",
+        cat: "business",
+        title: "👥 Creare un Team di Agenti (/teamwork)",
+        sub: "Squadra parallela controllata (max 3 agenti)",
+        tags: "teamwork squadra agenti multi agente collaborano parallelo orchestrator",
+        model: "Orchestrator / Sonnet 5.5",
+        cmd: "/teamwork",
+        cost: "🔴 Alto",
+        why: "Imposta max 3 agenti con pausa di approvazione dopo il piano iniziale per non bruciare token.",
+        prompt: "/teamwork Dobbiamo realizzare questo progetto complesso: [DESCRIVI OBIETTIVO]. Crea una squadra snella di MASSIMO 3 agenti:\n1) Ricercatore\n2) Produttore\n3) Revisore Qualità.\nFermatevi e chiedetemi il mio OK dopo il piano iniziale prima di produrre i file."
+      },
+      {
+        id: "offer",
+        cat: "business",
+        title: "✉️ Scrivere Offerte, Proposte & Email B2B",
+        sub: "Copy commerciale diretto e persuasivo",
+        tags: "email vendita b2b cold outreach proposta commerciale fatturato",
+        model: "Claude Sonnet 5.5",
+        cmd: "Chat Normale",
+        cost: "Basso",
+        why: "Scrive in italiano naturale e incisivo senza frasi da bot.",
+        prompt: "Sei un consulente B2B esperto. Scrivi un'email commerciale breve (massimo 120 parole) indirizzata al titolare di [TIPO AZIENDA] per proporgli [SERVIZIO]. Tono diretto, zero fuffa, chiudi proponendo una call di 15 minuti."
+      },
+      {
+        id: "docs",
+        cat: "business",
+        title: "📑 Preventivi Docs, Slide & Fogli Sheets",
+        sub: "Crea file reali nel tuo Google Workspace",
+        tags: "preventivo contratto google docs slides presentazione sheets excel tabella",
+        model: "Claude Sonnet 5.5",
+        cmd: "Skill: gdocs / gslides / gsheets",
+        cost: "Medio",
+        why: "Genera il file formattato direttamente nel tuo Google Drive.",
+        prompt: "Usa la skill [gdocs / gslides / gsheets] per creare un nuovo documento chiamato \"[TITOLO]\" basato su questi dati: [INCOLLA]. Impaginalo in modo professionale e dammi il link."
+      },
+      {
+        id: "subagent_research",
+        cat: "business",
+        title: "🧪 Analisi Massiva Documenti (Zero Sprechi)",
+        sub: "Delega la lettura di tanti file a un subagente leggero",
+        tags: "tanti file cartella enorme analisi profonda risparmiare token subagente",
+        model: "Claude Sonnet 5.5",
+        cmd: "Subagente: research",
+        cost: "🟢 Basso",
+        why: "Fa fare il lavoro sporco di lettura al subagente mantenendo leggera la chat principale.",
+        prompt: "Lancia un subagente 'research' per analizzare la cartella [NOME CARTELLA] su Drive/workspace ed estrarre in una tabella sintetica solo: obiettivi, prezzi, scadenze e criticità."
+      },
 
       // VITA PERSONALE & PRODUTTIVITÀ
-      { id: "drive", cat: "personal", title: "📁 Leggere & Riassumere Drive", sub: "PDF lunghi, contratti, appunti", model: "Gemini 3.8 Flash", cmd: "Skill: gdrive", cost: "Minimo", why: "Estrae in pochi secondi solo ciò che ti serve da documenti lunghi risparmiando il 90% dei token.", prompt: "Cerca su Google Drive il file \"[NOME FILE]\". Estrai in massimo 6 punti elenco: obiettivo, scadenze, costi/prezzi citati e azioni pratiche da fare." },
-      { id: "calendar", cat: "personal", title: "📅 Gestire Agenda & Call", sub: "Controlla orari su Google Calendar", model: "Gemini 3.8 Flash", cmd: "Skill: gcalendar", cost: "Minimo", why: "Verifica subito gli incastri della settimana o prenota un blocco di lavoro.", prompt: "Controlla il mio Google Calendar tra [DATA 1] e [DATA 2] e indicami 3 fasce orarie libere di almeno 30 minuti per una call." },
-      { id: "study", cat: "personal", title: "🎓 Imparare Qualsiasi Tema", sub: "Spiegazioni semplici senza tecnicismi", model: "Gemini 3.8 Flash", cmd: "Chat Normale", cost: "Minimo", why: "Ottimo per capire al volo un argomento nuovo (fiscale, legale, tech) come se te lo spiegasse un amico esperto.", prompt: "Spiegami [ARGOMENTO, es. come funziona l'AI Act / un contratto SaaS] in parole semplicissime, zero gergo tecnico, usando 3 esempi pratici della vita reale. Massimo 15 righe." },
-      { id: "travel_plan", cat: "personal", title: "🧭 Organizzare Viaggi & Spese", sub: "Itinerari, checklist o budget familiare", model: "Gemini 3.8 Flash", cmd: "Skill: gsheets (opzionale)", cost: "Minimo", why: "Crea tabelle ordinate per viaggi, liste della spesa, gestione budget personale o eventi.", prompt: "Organizzami un piano dettagliato ma pratico per [ES: 3 giorni a Milano tra appuntamenti di lavoro / budget spese mensili]. Dammi una tabella oraria chiara con costi stimati e cose da non dimenticare." }
+      {
+        id: "drive",
+        cat: "personal",
+        title: "📁 Leggere & Riassumere File su Drive",
+        sub: "PDF lunghi, contratti, appunti in 10 secondi",
+        tags: "drive pdf riassunto leggere documento file cercare",
+        model: "Gemini 3.8 Flash",
+        cmd: "Skill: gdrive",
+        cost: "Minimo",
+        why: "Estrae i punti chiave risparmiando fino al 90% dei token.",
+        prompt: "Cerca su Google Drive il file \"[NOME FILE]\". Estrai in massimo 6 punti elenco: obiettivo, scadenze, costi citati e azioni pratiche da fare."
+      },
+      {
+        id: "calendar",
+        cat: "personal",
+        title: "📅 Gestire Agenda & Call (Calendar)",
+        sub: "Trova buchi liberi o crea appuntamenti",
+        tags: "calendario agenda call appuntamenti orari gcalendar",
+        model: "Gemini 3.8 Flash",
+        cmd: "Skill: gcalendar",
+        cost: "Minimo",
+        why: "Legge la tua agenda reale e gestisce gli slot.",
+        prompt: "Controlla il mio Google Calendar tra [DATA 1] e [DATA 2] e indicami 3 fasce orarie libere di almeno 30 minuti per una call."
+      },
+      {
+        id: "study",
+        cat: "personal",
+        title: "🎓 Imparare Qualsiasi Tema in 2 Minuti",
+        sub: "Spiegazioni semplici zero-gergo",
+        tags: "imparare studiare capire spiegazione semplice guida personale",
+        model: "Gemini 3.8 Flash",
+        cmd: "Chat Normale",
+        cost: "Minimo",
+        why: "Ideale per capire al volo normative, tech, fiscalità o strumenti nuovi.",
+        prompt: "Spiegami [ARGOMENTO] in parole semplicissime, zero gergo tecnico, usando 3 esempi pratici della vita reale. Massimo 15 righe."
+      },
+      {
+        id: "travel_plan",
+        cat: "personal",
+        title: "🧭 Organizzare Viaggi, Spese & Routine",
+        sub: "Itinerari, budget familiare, checklist personali",
+        tags: "viaggio vacanza spese budget personale casa organizzazione checklist",
+        model: "Gemini 3.8 Flash",
+        cmd: "Chat / gsheets",
+        cost: "Minimo",
+        why: "Organizza in tabelle chiare viaggi di lavoro, spese mensili o liste operative.",
+        prompt: "Organizzami un piano chiaro e pratico per [ES: trasferta di 2 giorni a Milano / budget mensile]. Restituisci una tabella oraria/voci con costi stimati e cose da non dimenticare."
+      }
     ];
+
+    // --- SOCIAL SUITE DATA (7 PLATFORMS) ---
+    const socialData = {
+      generic: {
+        model: "Claude Sonnet 5.5",
+        skill: "b2b-linkedin-meta-ghostwriter + /plan",
+        tip: "Perfetto quando inizi un nuovo progetto da zero: crea il Piano Editoriale (PED) settimanale e adatta lo stesso messaggio a tutti i canali.",
+        formats: [
+          { label: "Piano Editoriale Multi-Canale (Nuovo Progetto)", template: "/plan Stiamo lanciando un nuovo progetto/brand: [TARGET]. Tema centrale: [TOPIC].\nCreiamo la strategia social iniziale cross-piattaforma (LinkedIn, Instagram, TikTok, Facebook, YouTube):\n1. I 3 pilastri editoriali principali.\n2. Calendario tipo settimanale (cosa pubblicare lunedì-venerdì).\n3. Adatta lo stesso argomento in: 1 Post LinkedIn, 1 Carosello IG, 1 Script Reel/TikTok e 1 Post Facebook." },
+          { label: "Lancio Nuovo Prodotto / Servizio (Teaser + Offerta)", template: "Prepara una mini-campagna di lancio in 3 giorni per [TARGET] sull'argomento \"[TOPIC]\":\n- Giorno 1 (Problema scomodo) per LinkedIn + Instagram\n- Giorno 2 (Soluzione/Demo) per YouTube Shorts/TikTok\n- Giorno 3 (Offerta diretta/Call) per tutti i canali." }
+        ]
+      },
+      linkedin: {
+        model: "Claude Sonnet 5.5",
+        skill: "b2b-linkedin-meta-ghostwriter",
+        tip: "L'algoritmo LinkedIn premia commenti lunghi, salvataggi dei Caroselli PDF e post con opinioni nette (anti-guru) basate sui numeri.",
+        formats: [
+          { label: "Post Contrarian / Autorità (Testo)", template: "Usa la skill b2b-linkedin-meta-ghostwriter. Scrivi un post LinkedIn B2B per [TARGET] sul tema: \"[TOPIC]\".\nStruttura obbligatoria:\n- Hook (prime 2 righe ad alto contrasto che bloccano lo scroll)\n- Smontaggio luogo comune / Errore di mercato\n- Framework pratico in 3-4 punti concreti\n- Domanda finale aperta per generare dibattito.\nMax 1.300 caratteri, tono diretto, zero emoji eccessive." },
+          { label: "Carosello PDF Multi-Pagina (Document Post)", template: "Usa b2b-linkedin-meta-ghostwriter. Crea un Carosello PDF per LinkedIn di 6 slide per [TARGET] su: \"[TOPIC]\".\nSlide 1: Cover con promessa forte\nSlide 2: Il paradosso/errore comune\nSlide 3: Dati/Verità scomoda\nSlide 4: Il Sistema operativo in 3 step\nSlide 5: Risultato atteso\nSlide 6: CTA finale + testo del post accompagnatorio." },
+          { label: "Outreach DM (Messaggio Privato B2B)", template: "Scrivi una sequenza di 2 brevi messaggi LinkedIn DM (max 50 parole ciascuno) per contattare [TARGET] riguardo \"[TOPIC]\". Niente vendite aggressive al primo messaggio: apri una conversazione basata su un problema reale o offri una risorsa gratuita." }
+        ]
+      },
+      instagram: {
+        model: "Claude Sonnet 5.5",
+        skill: "b2b-linkedin-meta-ghostwriter",
+        tip: "Su Instagram oggi vince la combo: Carosello 4:5 (per salvataggi) + Reel 45s con CTA parola chiave nei commenti (per DM automatici).",
+        formats: [
+          { label: "Reel Parlato + Teleprompter (45-60s)", template: "Usa b2b-linkedin-meta-ghostwriter. Scrivi un Reel Instagram (45-60s) per [TARGET] su: \"[TOPIC]\".\nDammi:\n1. Hook visivo e parlato (primi 3 secondi)\n2. Testo scorrevole da leggere al Teleprompter (ritmo veloce)\n3. Indicazioni B-roll / cosa mostrare sullo schermo\n4. CTA con parola chiave da commentare per ricevere una guida in DM + Caption breve." },
+          { label: "Carosello 4:5 (Salvataggi & Condivisioni)", template: "Crea un Carosello Instagram 4:5 di 6 slide per [TARGET] sul tema: \"[TOPIC]\". Titoli grandi max 6 parole per slide, testo leggibile in 2 secondi, ultima slide con invito a salvare il post e commentare." },
+          { label: "Sequenza 4 Stories di Vendita / Funnel", template: "Progetta una sequenza di 4 Instagram Stories per [TARGET] sul tema: \"[TOPIC]\".\nStory 1: Sondaggio interattivo sul problema\nStory 2: Errore/Retroscena\nStory 3: Soluzione/Caso studio reale\nStory 4: Box domanda / Link o parola chiave in DM." }
+        ]
+      },
+      tiktok: {
+        model: "Claude Sonnet 5.5",
+        skill: "Chat Normale / b2b-linkedin-meta-ghostwriter",
+        tip: "TikTok decide nei primi 1.8 secondi se far vedere il video. Niente intro tipo 'Ciao ragazzi sono...', entra subito nel conflitto o nel dato shock.",
+        formats: [
+          { label: "Video Breve Ritmato (30-45s, Hook Shock)", template: "Scrivi un copione TikTok ad altissima ritenzione (35-45 secondi) per [TARGET] su: \"[TOPIC]\".\nRegole:\n- Primi 2 secondi: frase shock o visual hook (ZERO saluti)\n- Ogni 4 secondi cambia concetto o azione a schermo\n- Linguaggio parlato naturale e diretto\n- Finale a ciclo aperto o CTA secca per commentare." },
+          { label: "Teardown / Reazione a Caso Reale", template: "Scrivi la scaletta di un video TikTok in formato 'Analisi dal vivo' dove mostro allo schermo un caso concreto legato a \"[TOPIC]\" per [TARGET], spiegando cosa è sbagliato e come lo sistemiamo noi." }
+        ]
+      },
+      facebook: {
+        model: "Claude Sonnet 5.5",
+        skill: "Chat Normale",
+        tip: "Facebook in Italia converte fortissimo su imprenditori locali, studi medici/estetici, PMI e Meta Ads con testi lunghi argomentati.",
+        formats: [
+          { label: "Copy per Meta Ads (Sponsored)", template: "Scrivi 2 varianti di copy per un'inserzione Facebook/Instagram Ads rivolta a [TARGET] su: \"[TOPIC]\".\nPer ogni variante dammi:\n- Prima riga aggancio (che filtra il target)\n- Corpo con problema + prova concreta + soluzione\n- Call to Action per cliccare o lasciare il contatto\n- Testo del Titolo breve (Headline) sotto l'immagine." },
+          { label: "Post Organico / Gruppi B2B & Local", template: "Scrivi un post Facebook chiaro e coinvolgente per [TARGET] su: \"[TOPIC]\". Tono concreto da imprenditore a imprenditore, facile da leggere anche da pubblico non tecnico, con domanda finale per stimolare i commenti." }
+        ]
+      },
+      youtube: {
+        model: "Claude Sonnet 5.5",
+        skill: "Chat Normale",
+        tip: "YouTube costruisce fiducia profonda (specialmente demo software e analisi casi studio) e porta lead caldissimi da ricerca Google.",
+        formats: [
+          { label: "Video Lungo / Demo Software (8-12 min)", template: "Progetta la scaletta completa di un video YouTube (8-12 minuti) per [TARGET] su: \"[TOPIC]\".\nDammi:\n1. 3 idee di Titolo SEO cliccabile + testo per la Copertina (Thumbnail)\n2. Introduzione primi 30 secondi (promessa chiara, niente sigle lunghe)\n3. Scaletta in 4 capitoli con cosa mostrare a schermo\n4. Descrizione YouTube SEO con capitoli e link CTA." },
+          { label: "YouTube Shorts (Verticale 50s)", template: "Adatta il tema \"[TOPIC]\" in un YouTube Short verticale da 50 secondi per [TARGET] focalizzato su una singola pillola pratica ad alto valore." }
+        ]
+      },
+      threads: {
+        model: "Claude Sonnet 5.5",
+        skill: "Chat Normale",
+        tip: "X e Threads premiano opinioni veloci, thread numerati passo-passo e micro-osservazioni quotidiane senza filtri.",
+        formats: [
+          { label: "Thread Educativo (5-6 Post collegati)", template: "Trasforma l'argomento \"[TOPIC]\" rivolto a [TARGET] in un Thread da 5 post brevi per X / Threads.\nPost 1: Tesi forte + 'Ecco come funziona 👇'\nPost 2-4: 1 concetto chiave per post (max 240 caratteri l'uno)\nPost 5: Sintesi + invito a seguire o salvare." },
+          { label: "5 Micro-Post Rapidi della Settimana", template: "Genera 5 micro-post secchi (max 220 caratteri ciascuno) su \"[TOPIC]\" per [TARGET], alternando verità scomode, errori da evitare e mini-consigli operativi." }
+        ]
+      }
+    };
 
     const commandsData = [
       { cmd: "/plan", badge: "Consigliato sempre", desc: "Impone all'AI di fermarsi e scriverti un piano passo-passo prima di toccare codice o file.", when: "Prima di creare un sito web, un'app o modificare un progetto esistente.", example: "/plan Voglio ristrutturare la home page del cliente X per renderla più veloce. Prima mostrami cosa vuoi cambiare." },
@@ -387,6 +862,8 @@
     ];
 
     const skillsData = [
+      { name: "market-research-verified-trends", cat: "biz", title: "Ricerche di Mercato & Trend Verificati", desc: "Ricerca approfondita su web e documenti Drive fino ad oggi, estraendo SOLO dati e statistiche con fonti certe e link.", prompt: "Usa la skill market-research-verified-trends per analizzare il mercato [SETTORE] fino ad oggi, solo con fonti certe." },
+      { name: "b2b-linkedin-meta-ghostwriter", cat: "biz", title: "Ghostwriter B2B LinkedIn & Meta", desc: "Genera post anti-guru, caroselli 4:5/PDF, caption IG e copioni Teleprompter orientati a sistemi e numeri.", prompt: "Usa b2b-linkedin-meta-ghostwriter per creare un post LinkedIn e un carosello su [ARGOMENTO]." },
       { name: "seo-aeo-geo-site-audit", cat: "web", title: "Audit SEO, AI & Codice Sito", desc: "Controlla visibilità su Google, ChatGPT e Perplexity; verifica Schema.org, robots.txt, sitemap e corregge subito il codice.", prompt: "Usa la skill seo-aeo-geo-site-audit sul sito in questo workspace e dimmi se un cliente oggi ci trova." },
       { name: "web-app-development", cat: "web", title: "Creazione Siti & App Web", desc: "Costruisce landing page, siti vetrina moderni, dashboard e interfacce curate.", prompt: "Usa web-app-development per creare una landing page pulita ed elegante per [NOME ATTIVITÀ]." },
       { name: "generative_ui", cat: "web", title: "Widget & Calcolatori Interattivi", desc: "Crea grafici, tabelle dinamiche, calcolatori ROI e guide interattive visive.", prompt: "Usa generative_ui per creare una scheda interattiva che mostri al cliente quanto risparmia con noi." },
@@ -399,16 +876,38 @@
       { name: "migrate-workflows", cat: "tech", title: "Aggiornamento Vecchi Flussi", desc: "Converte vecchi file di automazione nel formato moderno delle Skill.", prompt: "Usa migrate-workflows per aggiornare i vecchi flussi presenti in questa cartella." }
     ];
 
-    // LocalStorage for Custom Goals
+    // --- SEMANTIC DICTIONARY FOR SMART SEARCH ---
+    const semanticClusters = {
+      mercato: ["trend", "tendenze", "statistiche", "dati", "ricerca", "analisi", "settore", "domanda", "fonti", "competitor", "concorrenti", "studio", "report", "numeri", "evoluzione"],
+      social: ["instagram", "ig", "linkedin", "tiktok", "facebook", "fb", "youtube", "yt", "threads", "twitter", "x", "post", "reel", "carosello", "stories", "ads", "contenuti", "ped", "copy", "teleprompter"],
+      automazioni: ["whatsapp", "wa", "bot", "zapier", "make", "n8n", "webhook", "crm", "lead", "speed", "email", "brevo", "centralino", "telefono", "chiamate", "voce", "retell", "notifiche", "telegram"],
+      web: ["sito", "landing", "webapp", "pagina", "html", "vercel", "github", "deploy", "online", "pubblicare", "seo", "google", "chatgpt", "ai", "visibilità", "schema", "robots", "sitemap"],
+      bug: ["errore", "errori", "bug", "rotto", "non funziona", "bianco", "bianca", "console", "f12", "crash", "bloccato", "sistemare", "fix", "debug"],
+      media: ["video", "reel", "shorts", "youtube", "immagini", "foto", "grafica", "logo", "banner", "copertina", "carosello", "calcolatore", "roi", "ui", "widget"],
+      business: ["vendere", "vendite", "fatturato", "clienti", "preventivo", "proposta", "contratto", "bando", "invitalia", "gdpr", "finanza", "team", "teamwork", "agenti", "squadra", "slide", "docs", "excel", "sheets"],
+      personale: ["personale", "casa", "viaggio", "spese", "budget", "agenda", "calendario", "call", "appuntamento", "imparare", "studiare", "capire", "pdf", "riassunto", "drive"]
+    };
+
+    function expandSemanticTokens(query) {
+      const baseTokens = query.toLowerCase().split(/\s+/).filter(t => t.length >= 2);
+      const expanded = new Set(baseTokens);
+      for (const token of baseTokens) {
+        for (const [cluster, words] of Object.entries(semanticClusters)) {
+          if (cluster.includes(token) || words.some(w => w.includes(token) || token.includes(w))) {
+            expanded.add(cluster);
+            words.forEach(w => expanded.add(w));
+          }
+        }
+      }
+      return { baseTokens, expanded: Array.from(expanded) };
+    }
+
+    // --- LOCALSTORAGE FOR CUSTOM SCENARIOS ---
     function getCustomGoals() {
       try { return JSON.parse(localStorage.getItem("ag_custom_goals") || "[]"); } catch { return []; }
     }
-    function saveCustomGoals(list) {
-      localStorage.setItem("ag_custom_goals", JSON.stringify(list));
-    }
-    function getAllGoals() {
-      return [...defaultGoals, ...getCustomGoals()];
-    }
+    function saveCustomGoals(list) { localStorage.setItem("ag_custom_goals", JSON.stringify(list)); }
+    function getAllGoals() { return [...defaultGoals, ...getCustomGoals()]; }
 
     function showToast(msg = "✅ Copiato negli appunti!") {
       const t = document.getElementById("toast");
@@ -418,7 +917,7 @@
     }
     function copyText(text) { navigator.clipboard.writeText(text).then(() => showToast()); }
 
-    // Tabs
+    // --- TABS ---
     const tabBtns = document.querySelectorAll(".tab-btn");
     const tabPanels = document.querySelectorAll(".tab-panel");
     const searchSection = document.getElementById("searchResultsSection");
@@ -435,9 +934,9 @@
     }
     tabBtns.forEach(btn => btn.addEventListener("click", () => { searchInput.value = ""; activateTab(btn.dataset.tab); }));
 
-    // Render Wizard Goals
+    // --- WIZARD LOGIC ---
     let currentCat = "all";
-    let currentGoalId = "site";
+    let currentGoalId = "market_research";
 
     function renderGoalButtons() {
       const container = document.getElementById("wizardButtons");
@@ -446,10 +945,7 @@
       list.forEach(g => {
         const btn = document.createElement("button");
         btn.className = `goal-btn text-left p-4 rounded-xl border transition cursor-pointer ${g.id === currentGoalId ? "border-blue-500 ring-2 ring-blue-500 bg-slate-950" : "border-slate-800 bg-slate-950 hover:border-blue-500"}`;
-        btn.innerHTML = `
-          <div class="text-sm font-semibold text-white mb-1">${g.title}</div>
-          <div class="text-xs text-slate-400">${g.sub}</div>
-        `;
+        btn.innerHTML = `<div class="text-sm font-semibold text-white mb-1">${g.title}</div><div class="text-xs text-slate-400">${g.sub}</div>`;
         btn.addEventListener("click", () => selectGoal(g.id));
         container.appendChild(btn);
       });
@@ -469,11 +965,10 @@
       if (g.isCustom) {
         delBtn.classList.remove("hidden");
         delBtn.onclick = () => {
-          const updated = getCustomGoals().filter(x => x.id !== g.id);
-          saveCustomGoals(updated);
-          currentGoalId = "site";
+          saveCustomGoals(getCustomGoals().filter(x => x.id !== g.id));
+          currentGoalId = "market_research";
           renderGoalButtons();
-          selectGoal("site");
+          selectGoal("market_research");
           showToast("🗑️ Scenario eliminato");
         };
       } else {
@@ -488,73 +983,94 @@
         document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("cat-active"));
         btn.classList.add("cat-active");
         const filtered = getAllGoals().filter(g => currentCat === "all" || g.cat === currentCat);
-        if (filtered.length > 0 && !filtered.some(x => x.id === currentGoalId)) {
-          currentGoalId = filtered[0].id;
-        }
+        if (filtered.length > 0 && !filtered.some(x => x.id === currentGoalId)) currentGoalId = filtered[0].id;
         renderGoalButtons();
         selectGoal(currentGoalId);
       });
     });
 
     document.getElementById("wizCopyBtn").addEventListener("click", () => copyText(document.getElementById("wizPrompt").textContent));
-    selectGoal("site");
+    selectGoal("market_research");
 
     // Custom Goal Form
-    document.getElementById("toggleCustomGoalBtn").addEventListener("click", () => {
-      document.getElementById("customGoalForm").classList.toggle("hidden");
-    });
-    document.getElementById("cancelCustomGoalBtn").addEventListener("click", () => {
-      document.getElementById("customGoalForm").classList.add("hidden");
-    });
+    document.getElementById("toggleCustomGoalBtn").addEventListener("click", () => document.getElementById("customGoalForm").classList.toggle("hidden"));
+    document.getElementById("cancelCustomGoalBtn").addEventListener("click", () => document.getElementById("customGoalForm").classList.add("hidden"));
     document.getElementById("saveCustomGoalBtn").addEventListener("click", () => {
       const title = document.getElementById("cgTitle").value.trim();
       const prompt = document.getElementById("cgPrompt").value.trim();
       if (!title || !prompt) return showToast("⚠️ Inserisci titolo e prompt!");
       const newGoal = {
-        id: "custom_" + Date.now(),
-        isCustom: true,
-        cat: document.getElementById("cgCat").value,
-        title: title,
-        sub: "Scenario personale salvato",
-        model: document.getElementById("cgModel").value.trim() || "Claude Sonnet 5.5",
-        cmd: "Personalizzato",
-        cost: "Variabile",
-        why: "Prompt personalizzato salvato nella memoria del tuo browser.",
-        prompt: prompt
+        id: "custom_" + Date.now(), isCustom: true, cat: document.getElementById("cgCat").value,
+        title, sub: "Scenario personale salvato", model: document.getElementById("cgModel").value.trim() || "Claude Sonnet 5.5",
+        cmd: "Personalizzato", cost: "Variabile", why: "Prompt salvato nella memoria del tuo browser.", prompt, tags: title.toLowerCase()
       };
-      const list = getCustomGoals();
-      list.push(newGoal);
-      saveCustomGoals(list);
-      document.getElementById("cgTitle").value = "";
-      document.getElementById("cgPrompt").value = "";
+      const list = getCustomGoals(); list.push(newGoal); saveCustomGoals(list);
+      document.getElementById("cgTitle").value = ""; document.getElementById("cgPrompt").value = "";
       document.getElementById("customGoalForm").classList.add("hidden");
-      selectGoal(newGoal.id);
-      showToast("✅ Scenario salvato!");
+      selectGoal(newGoal.id); showToast("✅ Scenario salvato!");
     });
 
-    // Commands Grid
+    // --- SOCIAL SUITE LOGIC ---
+    let currentSoc = "generic";
+    const socFormatSel = document.getElementById("socFormat");
+    const socTargetInput = document.getElementById("socTarget");
+    const socTopicInput = document.getElementById("socTopic");
+
+    function renderSocialPlatform(plat) {
+      currentSoc = plat;
+      const data = socialData[plat];
+      document.getElementById("socBadgeModel").textContent = "Modello: " + data.model;
+      document.getElementById("socBadgeSkill").textContent = "Skill: " + data.skill;
+      document.getElementById("socTip").textContent = "💡 " + data.tip;
+
+      socFormatSel.innerHTML = "";
+      data.formats.forEach((f, idx) => {
+        const opt = document.createElement("option");
+        opt.value = idx;
+        opt.textContent = f.label;
+        socFormatSel.appendChild(opt);
+      });
+      updateSocialPrompt();
+    }
+
+    function updateSocialPrompt() {
+      const data = socialData[currentSoc];
+      const fmt = data.formats[parseInt(socFormatSel.value || "0", 10)] || data.formats[0];
+      const target = socTargetInput.value.trim() || "[TARGET]";
+      const topic = socTopicInput.value.trim() || "[ARGOMENTO]";
+      document.getElementById("socPrompt").textContent = fmt.template.replace(/\[TARGET\]/g, target).replace(/\[TOPIC\]/g, topic);
+    }
+
+    document.querySelectorAll(".soc-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".soc-btn").forEach(b => b.classList.remove("soc-active"));
+        btn.classList.add("soc-active");
+        renderSocialPlatform(btn.dataset.soc);
+      });
+    });
+    [socFormatSel, socTargetInput, socTopicInput].forEach(el => el.addEventListener("input", updateSocialPrompt));
+    socFormatSel.addEventListener("change", updateSocialPrompt);
+    document.getElementById("socCopyBtn").addEventListener("click", () => copyText(document.getElementById("socPrompt").textContent));
+    renderSocialPlatform("generic");
+
+    // --- COMMANDS & SKILLS ---
     const cmdGrid = document.getElementById("commandsGrid");
     commandsData.forEach(c => {
       const card = document.createElement("div");
       card.className = "bg-slate-950 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-3";
       card.innerHTML = `
         <div class="space-y-2">
-          <div class="flex items-center justify-between">
-            <span class="text-lg font-bold font-mono text-blue-400">${c.cmd}</span>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300">${c.badge}</span>
-          </div>
+          <div class="flex items-center justify-between"><span class="text-lg font-bold font-mono text-blue-400">${c.cmd}</span><span class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300">${c.badge}</span></div>
           <p class="text-sm text-slate-200">${c.desc}</p>
           <p class="text-xs text-slate-400"><strong>Quando usarlo:</strong> ${c.when}</p>
         </div>
         <div class="pt-3 border-t border-slate-800">
           <div class="text-xs font-mono p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">${c.example}</div>
           <button class="copy-dynamic mt-2 text-xs font-semibold text-blue-400 hover:underline cursor-pointer" data-copy="${c.example.replace(/"/g, '&quot;')}">📋 Copia esempio</button>
-        </div>
-      `;
+        </div>`;
       cmdGrid.appendChild(card);
     });
 
-    // Skills Grid
     const skillsGrid = document.getElementById("skillsGrid");
     function renderSkills(filter) {
       skillsGrid.innerHTML = "";
@@ -563,17 +1079,13 @@
         card.className = "bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-3";
         card.innerHTML = `
           <div class="space-y-1.5">
-            <div class="flex items-center justify-between gap-2">
-              <h3 class="font-bold text-sm text-white">${s.title}</h3>
-              <code class="text-xs px-2 py-0.5 rounded bg-slate-800 text-blue-300">${s.name}</code>
-            </div>
+            <div class="flex items-center justify-between gap-2"><h3 class="font-bold text-sm text-white">${s.title}</h3><code class="text-xs px-2 py-0.5 rounded bg-slate-800 text-blue-300">${s.name}</code></div>
             <p class="text-xs text-slate-400">${s.desc}</p>
           </div>
           <div class="pt-3 border-t border-slate-800">
             <div class="text-xs font-mono p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300">${s.prompt}</div>
             <button class="copy-dynamic mt-2 text-xs font-semibold text-blue-400 hover:underline cursor-pointer" data-copy="${s.prompt.replace(/"/g, '&quot;')}">📋 Copia prompt</button>
-          </div>
-        `;
+          </div>`;
         skillsGrid.appendChild(card);
       });
     }
@@ -586,12 +1098,8 @@
       });
     });
 
-    // Skill Builder
-    const skName = document.getElementById("skName");
-    const skRole = document.getElementById("skRole");
-    const skSteps = document.getElementById("skSteps");
-    const skRules = document.getElementById("skRules");
-    const skOutput = document.getElementById("skOutput");
+    // --- BUILDERS ---
+    const skName = document.getElementById("skName"), skRole = document.getElementById("skRole"), skSteps = document.getElementById("skSteps"), skRules = document.getElementById("skRules"), skOutput = document.getElementById("skOutput");
     function updateSkillPrompt() {
       const cleanName = skName.value.trim().toLowerCase().replace(/\s+/g, "-") || "nuova-skill";
       skOutput.textContent = `Crea e salva una nuova skill permanente chiamata "${cleanName}".\nQuando la attivo, devi comportarti come: ${skRole.value}.\nProcedura esatta da seguire: ${skSteps.value}\nRegole fisse da rispettare sempre: ${skRules.value}`;
@@ -600,11 +1108,7 @@
     updateSkillPrompt();
     document.getElementById("skCopyBtn").addEventListener("click", () => copyText(skOutput.textContent));
 
-    // Bug Builder
-    const bgWhere = document.getElementById("bgWhere");
-    const bgExpected = document.getElementById("bgExpected");
-    const bgActual = document.getElementById("bgActual");
-    const bgOutput = document.getElementById("bgOutput");
+    const bgWhere = document.getElementById("bgWhere"), bgExpected = document.getElementById("bgExpected"), bgActual = document.getElementById("bgActual"), bgOutput = document.getElementById("bgOutput");
     function updateBugPrompt() {
       bgOutput.textContent = `NON riscrivere tutto il file da capo e NON toccare le altre funzionalità.\n- Dove succede: ${bgWhere.value}\n- Cosa DOVEVA fare: ${bgExpected.value}\n- Cosa succede / Errore esatto: ${bgActual.value}\n\nOperazione richiesta:\n1. Trova la causa esatta e spiegamela in massimo 2 righe.\n2. Correggi SOLO quel blocco senza alterare il resto.\n3. Aggiungi un controllo affinché questo errore non si ripeta più.`;
     }
@@ -614,9 +1118,8 @@
 
     document.addEventListener("click", e => { if (e.target.classList.contains("copy-dynamic")) copyText(e.target.dataset.copy); });
 
-    const slider = document.getElementById("msgSlider");
-    const msgLabel = document.getElementById("msgCountLabel");
-    const multLabel = document.getElementById("tokenMultiplier");
+    // --- TOKEN SLIDER ---
+    const slider = document.getElementById("msgSlider"), msgLabel = document.getElementById("msgCountLabel"), multLabel = document.getElementById("tokenMultiplier");
     slider.addEventListener("input", () => {
       const val = parseInt(slider.value, 10);
       msgLabel.textContent = val + " messaggi";
@@ -625,33 +1128,69 @@
       else { multLabel.textContent = Math.round(val / 6) + "x (Spreco! Apri nuova chat)"; multLabel.className = "text-2xl font-bold mt-1 text-rose-400"; }
     });
 
-    // Global Search across all goals, commands, skills
+    // --- SEMANTIC SEARCH ENGINE ---
     searchInput.addEventListener("input", () => {
-      const q = searchInput.value.trim().toLowerCase();
+      const q = searchInput.value.trim();
       if (!q) { activateTab(document.querySelector(".tab-btn.tab-active").dataset.tab); return; }
       tabPanels.forEach(p => p.classList.add("hidden"));
       searchSection.classList.remove("hidden");
+
+      const { baseTokens, expanded } = expandSemanticTokens(q);
+      const socialItems = Object.entries(socialData).flatMap(([plat, d]) =>
+        d.formats.map(f => ({
+          title: `📱 Social (${plat.toUpperCase()}) — ${f.label}`,
+          desc: `${d.tip} [Modello: ${d.model}]`,
+          tags: `social ${plat} ${f.label} post video contenuti marketing`,
+          prompt: f.template
+        }))
+      );
+
+      const corpus = [
+        ...getAllGoals().map(g => ({ title: g.title, desc: `${g.why} (${g.model} | ${g.cmd})`, tags: g.tags || "", prompt: g.prompt })),
+        ...socialItems,
+        ...commandsData.map(c => ({ title: `⚡ Comando ${c.cmd} (${c.badge})`, desc: `${c.desc} — ${c.when}`, tags: "comandi slash /", prompt: c.example })),
+        ...skillsData.map(s => ({ title: `🛠️ Skill: ${s.title} [${s.name}]`, desc: s.desc, tags: s.name + " skill", prompt: s.prompt }))
+      ];
+
+      const scored = corpus.map(item => {
+        const hay = `${item.title} ${item.desc} ${item.tags} ${item.prompt}`.toLowerCase();
+        let score = 0;
+        baseTokens.forEach(t => {
+          if (item.title.toLowerCase().includes(t)) score += 10;
+          else if (hay.includes(t)) score += 5;
+        });
+        expanded.forEach(t => {
+          if (hay.includes(t)) score += 2;
+        });
+        return { item, score };
+      }).filter(x => x.score > 0).sort((a, b) => b.score - a.score);
+
+      document.getElementById("searchMeta").textContent = `Trovati ${scored.length} risultati pertinenti (espansione semantica attiva su: ${expanded.slice(0, 6).join(", ")})`;
       const container = document.getElementById("searchResultsContainer");
       container.innerHTML = "";
-      const allItems = [
-        ...getAllGoals().map(g => ({ title: g.title, desc: g.why + " (" + g.model + ")", prompt: g.prompt })),
-        ...commandsData.map(c => ({ title: c.cmd + " (" + c.badge + ")", desc: c.desc, prompt: c.example })),
-        ...skillsData.map(s => ({ title: s.title + " [" + s.name + "]", desc: s.desc, prompt: s.prompt }))
-      ];
-      const matches = allItems.filter(i => i.title.toLowerCase().includes(q) || i.desc.toLowerCase().includes(q) || i.prompt.toLowerCase().includes(q));
-      if (matches.length === 0) { container.innerHTML = `<p class="text-sm text-slate-400">Nessun risultato trovato per "${q}".</p>`; return; }
-      matches.forEach(m => {
+      if (scored.length === 0) {
+        container.innerHTML = `<p class="text-sm text-slate-400">Nessuna corrispondenza trovata per "${q}". Prova con termini come "mercato", "instagram", "whatsapp", "errore" o "preventivi".</p>`;
+        return;
+      }
+      scored.slice(0, 14).forEach(({ item, score }) => {
         const div = document.createElement("div");
-        div.className = "bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2";
+        div.className = "bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2 flex flex-col justify-between";
         div.innerHTML = `
-          <div class="font-bold text-sm text-white">${m.title}</div>
-          <p class="text-xs text-slate-400">${m.desc}</p>
-          <div class="text-xs font-mono p-2 rounded bg-slate-950 border border-slate-800 text-slate-300">${m.prompt}</div>
-          <button class="copy-dynamic text-xs font-semibold text-blue-400 hover:underline cursor-pointer" data-copy="${m.prompt.replace(/"/g, '&quot;')}">📋 Copia</button>
-        `;
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between gap-2">
+              <div class="font-bold text-sm text-white">${item.title}</div>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">Pertinenza: ${Math.min(99, score * 4)}%</span>
+            </div>
+            <p class="text-xs text-slate-400">${item.desc}</p>
+          </div>
+          <div class="pt-2">
+            <div class="text-xs font-mono p-2 rounded bg-slate-950 border border-slate-800 text-slate-300 line-clamp-3">${item.prompt}</div>
+            <button class="copy-dynamic mt-2 text-xs font-semibold text-blue-400 hover:underline cursor-pointer" data-copy="${item.prompt.replace(/"/g, '&quot;')}">📋 Copia prompt</button>
+          </div>`;
         container.appendChild(div);
       });
     });
+
     document.getElementById("clearSearch").addEventListener("click", () => { searchInput.value = ""; activateTab(document.querySelector(".tab-btn.tab-active").dataset.tab); });
   </script>
 </body>
