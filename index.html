@@ -862,7 +862,7 @@
     ];
 
     const skillsData = [
-      { name: "market-research-verified-trends", cat: "biz", title: "Ricerche di Mercato & Trend Verificati", desc: "Ricerca approfondita su web e documenti Drive fino ad oggi, estraendo SOLO dati e statistiche con fonti certe e link.", prompt: "Usa la skill market-research-verified-trends per analizzare il mercato [SETTORE] fino ad oggi, solo con fonti certe." },
+      { name: "market-research-verified-trends", cat: "biz", title: "Caccia Trend & Ricerca Categoria Omnicanale", desc: "Scansiona Web, Social (TikTok, IG, YT, LinkedIn, Reddit), Marketplace (Amazon, Trustpilot, G2), Ad Library e Drive fino ad oggi. Solo dati e link certi.", prompt: "Usa la skill market-research-verified-trends per scansionare web, social, marketplace e Drive sulla categoria/prodotto [TEMA] fino ad oggi, solo fonti certe." },
       { name: "b2b-linkedin-meta-ghostwriter", cat: "biz", title: "Ghostwriter B2B LinkedIn & Meta", desc: "Genera post anti-guru, caroselli 4:5/PDF, caption IG e copioni Teleprompter orientati a sistemi e numeri.", prompt: "Usa b2b-linkedin-meta-ghostwriter per creare un post LinkedIn e un carosello su [ARGOMENTO]." },
       { name: "seo-aeo-geo-site-audit", cat: "web", title: "Audit SEO, AI & Codice Sito", desc: "Controlla visibilità su Google, ChatGPT e Perplexity; verifica Schema.org, robots.txt, sitemap e corregge subito il codice.", prompt: "Usa la skill seo-aeo-geo-site-audit sul sito in questo workspace e dimmi se un cliente oggi ci trova." },
       { name: "web-app-development", cat: "web", title: "Creazione Siti & App Web", desc: "Costruisce landing page, siti vetrina moderni, dashboard e interfacce curate.", prompt: "Usa web-app-development per creare una landing page pulita ed elegante per [NOME ATTIVITÀ]." },
@@ -878,7 +878,7 @@
 
     // --- SEMANTIC DICTIONARY FOR SMART SEARCH ---
     const semanticClusters = {
-      mercato: ["trend", "tendenze", "statistiche", "dati", "ricerca", "analisi", "settore", "domanda", "fonti", "competitor", "concorrenti", "studio", "report", "numeri", "evoluzione"],
+      mercato: ["trend", "tendenze", "statistiche", "dati", "ricerca", "analisi", "settore", "categoria", "prodotto", "servizio", "domanda", "fonti", "competitor", "concorrenti", "studio", "report", "numeri", "evoluzione", "amazon", "reddit", "trustpilot", "g2", "ad library", "recensioni"],
       social: ["instagram", "ig", "linkedin", "tiktok", "facebook", "fb", "youtube", "yt", "threads", "twitter", "x", "post", "reel", "carosello", "stories", "ads", "contenuti", "ped", "copy", "teleprompter"],
       automazioni: ["whatsapp", "wa", "bot", "zapier", "make", "n8n", "webhook", "crm", "lead", "speed", "email", "brevo", "centralino", "telefono", "chiamate", "voce", "retell", "notifiche", "telegram"],
       web: ["sito", "landing", "webapp", "pagina", "html", "vercel", "github", "deploy", "online", "pubblicare", "seo", "google", "chatgpt", "ai", "visibilità", "schema", "robots", "sitemap"],
