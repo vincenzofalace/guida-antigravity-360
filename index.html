@@ -2,34 +2,40 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0b0f19" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Antigravity 360" />
   <title>Antigravity 2.0 — Piattaforma Operativa 360°</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background-color: #0b0f19; color: #f1f5f9; font-family: system-ui, -apple-system, sans-serif; }
+    body { background-color: #0b0f19; color: #f1f5f9; font-family: system-ui, -apple-system, sans-serif; -webkit-tap-highlight-color: transparent; }
     .tab-active { background-color: #3b82f6 !important; color: #ffffff !important; }
     .cat-active, .soc-active { background-color: #2563eb !important; color: #ffffff !important; border-color: #3b82f6 !important; }
     .copy-toast { transition: opacity 0.2s ease; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
-<body class="antialiased min-h-screen p-4 md:p-8">
-  <div class="max-w-6xl mx-auto space-y-6">
+<body class="antialiased min-h-screen p-3 pb-20 md:p-8">
+  <div class="max-w-6xl mx-auto space-y-4 md:space-y-6">
 
     <!-- Header -->
-    <header class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+    <header class="bg-slate-900 border border-slate-800 rounded-2xl p-4 md:p-6 shadow-xl">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div class="flex flex-wrap items-center gap-2 mb-2">
-            <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+            <span class="text-[11px] md:text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
               Piattaforma Operativa 360°
             </span>
-            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-              Sync Ambiente: 22 Nov 2026 • 12 Skill Attive
+            <span class="text-[11px] md:text-xs px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+              Sync: 24 Nov 2026 • Mobile Ready 📱
             </span>
           </div>
-          <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Google Antigravity 2.0 — Command Center</h1>
-          <p class="text-sm text-slate-400 mt-1">
-            Ricerca semantica intelligente, Social Suite completa, Ricerche di mercato con fonti certe e tutti i workflow del tuo ecosistema.
+          <h1 class="text-xl md:text-3xl font-bold tracking-tight text-white">Google Antigravity 2.0 — Command Center</h1>
+          <p class="text-xs md:text-sm text-slate-400 mt-1">
+            Ricerca semantica, Social Suite 7 canali, Caccia Trend Omnicanale e prompt pronti per PC e Smartphone.
           </p>
         </div>
         <div class="w-full md:w-80">
@@ -37,26 +43,26 @@
             <input
               id="globalSearch"
               type="text"
-              placeholder="🔍 Ricerca semantica (es. trend, reel, wa, bug)..."
-              class="w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="🔍 Ricerca semantica (es. trend, reel, wa)..."
+              class="w-full px-3.5 py-3 md:py-2.5 text-sm rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <p class="text-[11px] text-slate-500 mt-1">Capisce sinonimi e intenti (es. "clienti" → CRM/Offerte, "statistiche" → Ricerca Mercato)</p>
+          <p class="text-[11px] text-slate-500 mt-1 hidden md:block">Capisce sinonimi e intenti (es. "clienti" → CRM/Offerte, "statistiche" → Ricerca Mercato)</p>
         </div>
       </div>
 
-      <!-- Main Navigation -->
-      <nav class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-slate-800" id="navTabs">
-        <button data-tab="wizard" class="tab-btn tab-active px-3 py-2 rounded-xl text-xs md:text-sm font-medium transition cursor-pointer">🎯 Scenari (24)</button>
-        <button data-tab="social" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">📱 Social Suite (7 Canali)</button>
-        <button data-tab="ecosystem" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🗺️ Ecosistema &amp; Workflow</button>
-        <button data-tab="models" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧠 Modelli AI</button>
-        <button data-tab="commands" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">⚡ Comandi</button>
-        <button data-tab="skills" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🛠️ Skill (12)</button>
-        <button data-tab="builder" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧩 Crea Skill</button>
-        <button data-tab="debug" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🚑 Bug &amp; Errori</button>
-        <button data-tab="apps" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🔄 Sync &amp; App</button>
-        <button data-tab="tokens" class="tab-btn px-3 py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">💰 Token</button>
+      <!-- Main Navigation (Horizontal swipe on smartphone) -->
+      <nav class="flex flex-nowrap md:flex-wrap overflow-x-auto no-scrollbar gap-2 mt-4 pt-4 border-t border-slate-800" id="navTabs">
+        <button data-tab="wizard" class="tab-btn tab-active shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium transition cursor-pointer">🎯 Scenari (24)</button>
+        <button data-tab="social" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">📱 Social (7)</button>
+        <button data-tab="ecosystem" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🗺️ Ecosistema</button>
+        <button data-tab="models" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧠 Modelli</button>
+        <button data-tab="commands" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">⚡ Comandi</button>
+        <button data-tab="skills" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🛠️ Skill (12)</button>
+        <button data-tab="builder" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧩 Crea Skill</button>
+        <button data-tab="debug" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🚑 Bug</button>
+        <button data-tab="apps" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🔄 Sync</button>
+        <button data-tab="tokens" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">💰 Token</button>
       </nav>
     </header>
 
@@ -946,7 +952,12 @@
         const btn = document.createElement("button");
         btn.className = `goal-btn text-left p-4 rounded-xl border transition cursor-pointer ${g.id === currentGoalId ? "border-blue-500 ring-2 ring-blue-500 bg-slate-950" : "border-slate-800 bg-slate-950 hover:border-blue-500"}`;
         btn.innerHTML = `<div class="text-sm font-semibold text-white mb-1">${g.title}</div><div class="text-xs text-slate-400">${g.sub}</div>`;
-        btn.addEventListener("click", () => selectGoal(g.id));
+        btn.addEventListener("click", () => {
+          selectGoal(g.id);
+          if (window.innerWidth < 768) {
+            document.getElementById("wizardResult").scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+        });
         container.appendChild(btn);
       });
     }
