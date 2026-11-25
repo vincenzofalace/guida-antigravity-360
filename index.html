@@ -284,10 +284,10 @@
                 <td class="py-3.5"><strong>Scelta #1 nel 90% dei casi.</strong> Siti web, copy social/B2B, ricerche strategiche, debug preciso senza rompere nulla.</td>
               </tr>
               <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 3.8 Flash</td>
+                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 3.8 Flash <span class="ml-1 px-2 py-0.5 rounded text-xs bg-yellow-500/20 text-yellow-300">⏳ In uscita</span></td>
                 <td class="py-3.5 pr-4">Assistente Veloce</td>
                 <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-emerald-500/20 text-emerald-300">🟢 Minimo</span></td>
-                <td class="py-3.5">Domande rapide, riassunti PDF, ricerche web veloci, lettura file Google Drive e gestione Calendar.</td>
+                <td class="py-3.5">Domande rapide, riassunti PDF, ricerche web veloci, Drive e Calendar. <em>Verrà rimosso: passa a Gemini 4 Hydrogen.</em></td>
               </tr>
               <tr>
                 <td class="py-3.5 pr-4 font-semibold text-white">Claude Opus 5.5</td>
@@ -302,13 +302,29 @@
                 <td class="py-3.5">Per coordinare più passaggi complessi e `/teamwork` in autonomia.</td>
               </tr>
               <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 4 Neon / Argon / Hydrogen</td>
+                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 4 Neon / Carbon / Hydrogen <span class="ml-1 px-2 py-0.5 rounded text-xs bg-sky-500/20 text-sky-300">🆕 Nuovi</span></td>
                 <td class="py-3.5 pr-4">Specialisti Veloci</td>
                 <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-emerald-500/20 text-emerald-300">🟢 Medio-Basso</span></td>
-                <td class="py-3.5">Alternative rapide quando vuoi velocità simile a Flash ma con più ragionamento.</td>
+                <td class="py-3.5">Famiglia Gemini 4 (livello Medium): sostituisce Flash per i task rapidi. Hydrogen è il default consigliato; Neon e Carbon sono alternative equivalenti come consumo, da provare se Hydrogen non rende.</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 4 Argon <span class="ml-1 px-2 py-0.5 rounded text-xs bg-yellow-500/20 text-yellow-300">⏳ In uscita</span></td>
+                <td class="py-3.5 pr-4">Specialista (dismissione)</td>
+                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-amber-500/20 text-amber-300">🟡 Medio</span></td>
+                <td class="py-3.5">Evita di basarci nuovi flussi: sarà rimosso. Usa Hydrogen.</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 pr-4 font-semibold text-white">GPT-OSS 120B <span class="ml-1 px-2 py-0.5 rounded text-xs bg-orange-500/20 text-orange-300">⚠️ Notice</span></td>
+                <td class="py-3.5 pr-4">Modello open-source</td>
+                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-amber-500/20 text-amber-300">🟡 Medio</span></td>
+                <td class="py-3.5">Segnalato con avviso dal selettore: controlla la nota in Antigravity prima di usarlo su lavori importanti. Per il lavoro reale preferisci Sonnet 5.5.</td>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div class="mt-4 text-xs text-slate-400 space-y-1">
+          <p>🆕 <strong>Nuovo</strong> = appena aggiunto · ⏳ <strong>In uscita</strong> = verrà rimosso a breve · ⚠️ <strong>Notice</strong> = avviso da leggere nel selettore.</p>
+          <p>📊 Nel selettore tutti i modelli risultano di livello "Medium": i consumi qui sono indicativi. Per il dato reale apri <strong>View Usage</strong> in fondo al menu Model (vedi anche il Simulatore Token).</p>
         </div>
       </div>
     </section>
@@ -509,10 +525,10 @@
         title: "🕵️ Analisi Competitor & Mercato",
         sub: "Spia offerte, prezzi, posizionamento e debolezze",
         tags: "concorrenti competitor spy prezzi confronto analisi sito",
-        model: "Gemini 3.8 Flash",
+        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
         cmd: "Ricerca Web + Browse",
         cost: "Minimo",
-        why: "Gemini Flash legge i siti dei concorrenti in tempo reale a costo bassissimo.",
+        why: "Un modello Gemini veloce (Hydrogen/Flash) legge i siti dei concorrenti in tempo reale a costo bassissimo.",
         prompt: "Analizza il sito web del concorrente [URL SITO] e confrontalo con la nostra offerta [DESCRIVI]. Restituisci una tabella sintetica con: 1) Punti di forza loro, 2) Punti deboli/mancanze, 3) Prezzi rilevati, 4) 3 leve commerciali per batterli."
       },
       {
@@ -747,7 +763,7 @@
         title: "📁 Leggere & Riassumere File su Drive",
         sub: "PDF lunghi, contratti, appunti in 10 secondi",
         tags: "drive pdf riassunto leggere documento file cercare",
-        model: "Gemini 3.8 Flash",
+        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
         cmd: "Skill: gdrive",
         cost: "Minimo",
         why: "Estrae i punti chiave risparmiando fino al 90% dei token.",
@@ -759,7 +775,7 @@
         title: "📅 Gestire Agenda & Call (Calendar)",
         sub: "Trova buchi liberi o crea appuntamenti",
         tags: "calendario agenda call appuntamenti orari gcalendar",
-        model: "Gemini 3.8 Flash",
+        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
         cmd: "Skill: gcalendar",
         cost: "Minimo",
         why: "Legge la tua agenda reale e gestisce gli slot.",
@@ -771,7 +787,7 @@
         title: "🎓 Imparare Qualsiasi Tema in 2 Minuti",
         sub: "Spiegazioni semplici zero-gergo",
         tags: "imparare studiare capire spiegazione semplice guida personale",
-        model: "Gemini 3.8 Flash",
+        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
         cmd: "Chat Normale",
         cost: "Minimo",
         why: "Ideale per capire al volo normative, tech, fiscalità o strumenti nuovi.",
@@ -783,7 +799,7 @@
         title: "🧭 Organizzare Viaggi, Spese & Routine",
         sub: "Itinerari, budget familiare, checklist personali",
         tags: "viaggio vacanza spese budget personale casa organizzazione checklist",
-        model: "Gemini 3.8 Flash",
+        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
         cmd: "Chat / gsheets",
         cost: "Minimo",
         why: "Organizza in tabelle chiare viaggi di lavoro, spese mensili o liste operative.",
