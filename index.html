@@ -30,7 +30,7 @@
               Piattaforma Operativa 360°
             </span>
             <span class="text-[11px] md:text-xs px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-              Sync: 24 Nov 2026 • Mobile Ready 📱
+              Sync: 25 Nov 2026 • Mobile Ready 📱
             </span>
           </div>
           <h1 class="text-xl md:text-3xl font-bold tracking-tight text-white">Google Antigravity 2.0 — Command Center</h1>
@@ -54,6 +54,7 @@
       <!-- Main Navigation (Horizontal swipe on smartphone) -->
       <nav class="flex flex-nowrap md:flex-wrap overflow-x-auto no-scrollbar gap-2 mt-4 pt-4 border-t border-slate-800" id="navTabs">
         <button data-tab="wizard" class="tab-btn tab-active shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium transition cursor-pointer">🎯 Scenari (24)</button>
+        <button data-tab="guide" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧭 Guida Base</button>
         <button data-tab="social" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">📱 Social (7)</button>
         <button data-tab="ecosystem" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🗺️ Ecosistema</button>
         <button data-tab="models" class="tab-btn shrink-0 px-3.5 py-2.5 md:py-2 rounded-xl text-xs md:text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 transition cursor-pointer">🧠 Modelli</button>
@@ -144,6 +145,109 @@
             <button id="wizCopyBtn" class="mt-2 px-4 py-2 rounded-lg text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500 cursor-pointer">
               📋 Copia Prompt
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: GUIDA BASE PER NON ESPERTI -->
+    <section id="tab-guide" class="tab-panel hidden space-y-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Zero Gergo Tecnico • Metodo Pratico</span>
+          <h2 class="text-xl font-bold text-white mt-2">🧭 Come usare Antigravity al meglio (senza fare errori)</h2>
+          <p class="text-sm text-slate-400 mt-1">Non serve essere programmatori: basta seguire questo ordine ogni volta che vuoi trasformare un'idea in un progetto reale.</p>
+        </div>
+
+        <!-- 5 Passi -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-blue-300 mb-3">1. Il Metodo in 5 Passi per ogni tua idea</h3>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-xs">
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-bold text-white">Passo 1 · Chat Pulita</div>
+              <p class="text-slate-400">Apri sempre una <strong>nuova chat</strong> per ogni progetto diverso. Se mischi due argomenti, l'AI si confonde e bruci quota.</p>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-bold text-white">Passo 2 · Motore Giusto</div>
+              <p class="text-slate-400"><strong>Hydrogen</strong> per domande/ricerche veloci · <strong>Neon</strong> o <strong>Sonnet 5.5</strong> per costruire · <strong>Carbon</strong> solo se si blocca.</p>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-bold text-white">Passo 3 · Prima Pianifica</div>
+              <p class="text-slate-400">Su idee nuove usa <code>/plan</code> o chiedi: <em>"Fammi 5 domande prima di scrivere una riga"</em>. Eviti di rifare tutto.</p>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-bold text-white">Passo 4 · Un Pezzo alla Volta</div>
+              <p class="text-slate-400">Non chiedere tutta l'app in un messaggio. Fai un blocco alla volta, controllalo, poi passa al successivo.</p>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+              <div class="font-bold text-white">Passo 5 · Salva al Sicuro</div>
+              <p class="text-slate-400">Salva il codice su <strong>GitHub</strong> (repo privato). Tieni <strong>sempre fuori</strong> file <code>.env</code>, password e chiavi API.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cosa serve a cosa (Zero Gergo) -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-purple-300 mb-3">2. Cosa serve a cosa (Dizionario Zero-Gergo)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4">
+              <div class="font-bold text-white mb-1">💬 Chat Normale (Modello Singolo)</div>
+              <p class="text-slate-300">Usala nell'80% dei casi: scrivere testi, modificare 1–2 file, fare una landing page, sistemare un errore preciso. Più veloce e consuma meno.</p>
+            </div>
+            <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4">
+              <div class="font-bold text-white mb-1">🎛️ Orchestrator (Doppio Cervello)</div>
+              <p class="text-slate-300">Un modello <strong>Pianifica</strong> (es. Neon) e un altro <strong>Esegue</strong> (Hydrogen). Usalo quando il lavoro ha tanti passaggi collegati (es. creare un'app intera o migrare più file).</p>
+            </div>
+            <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4">
+              <div class="font-bold text-white mb-1">📋 /plan e /grill-me</div>
+              <p class="text-slate-300"><code>/plan</code> prepara la scaletta prima di agire. <code>/grill-me</code> ti fa domande scomode per chiarire buchi nella tua idea prima di spendere tempo e token.</p>
+            </div>
+            <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4">
+              <div class="font-bold text-white mb-1">🛠️ Skill e Plugin (Drive, GitHub, Sheets...)</div>
+              <p class="text-slate-300">Le <strong>Skill</strong> sono "manuali operativi" salvati nel profilo (es. SEO, LinkedIn, Trend). I <strong>Plugin</strong> collegano Antigravity ai tuoi dati reali su Drive, Calendar e GitHub.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 Errori da Evitare -->
+        <div class="bg-rose-950/20 border border-rose-500/30 rounded-xl p-4 space-y-2">
+          <h3 class="text-sm font-bold text-rose-300">🚫 I 7 Errori che bruciano crediti e creano disastri</h3>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5 text-xs text-slate-300 list-disc pl-4">
+            <li><strong>Usare Carbon o Opus per domande banali:</strong> esaurisci la quota delle 5 ore in pochi minuti.</li>
+            <li><strong>Chiedere "fammi tutto il progetto" in un colpo:</strong> l'AI inventa e lascia bug ovunque.</li>
+            <li><strong>Non aprire una nuova chat tra un lavoro e l'altro:</strong> il contesto si sporca e i costi raddoppiano.</li>
+            <li><strong>Lasciare modelli vecchi (3.8 Flash / Argon):</strong> escono il 30 novembre 2026 e bloccheranno i flussi.</li>
+            <li><strong>Non collegare la cartella/repo o il link Drive:</strong> se non vede i file reali, l'AI tira a indovinare.</li>
+            <li><strong>Incollare chiavi API o file <code>.env</code> su GitHub:</strong> rischio sicurezza gravissimo.</li>
+            <li><strong>Ignorare <em>View Usage</em>:</strong> controllalo in fondo al menu Model prima di lanciare lavori grossi.</li>
+          </ul>
+        </div>
+
+        <!-- 3 Prompt Anti-Errore -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-300 mb-3">3. Tre Prompt "Salva-Progetto" pronti da copiare</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 flex flex-col justify-between gap-3">
+              <div>
+                <div class="font-bold text-white mb-1">🚀 Avvia una nuova idea</div>
+                <p class="text-slate-400">Obbliga l'AI a capire tutto prima di scrivere codice o testi.</p>
+              </div>
+              <button class="copy-dynamic px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold cursor-pointer" data-copy="/plan Ho questa idea: [DESCRIVI L'IDEA IN 3 RIGHE]. Prima di scrivere qualsiasi file, agisci come mio Chief Architect: fammi 5 domande essenziali per chiarire i dubbi e proponimi la strada più semplice orientata al ROI (zero over-engineering).">📋 Copia Prompt Avvio</button>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 flex flex-col justify-between gap-3">
+              <div>
+                <div class="font-bold text-white mb-1">🔧 Sistemare un errore senza rompere altro</div>
+                <p class="text-slate-400">Quando qualcosa non va, evita che l'AI riscriva tutto da zero.</p>
+              </div>
+              <button class="copy-dynamic px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold cursor-pointer" data-copy="Ho questo problema preciso: [DESCRIVI COSA VEDI / INCOLLA ERRORE]. Non riscrivere tutto il progetto: trova la causa esatta, spiegamela in parole semplici e applica la modifica minima chirurgica per risolvere.">📋 Copia Prompt Fix</button>
+            </div>
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 flex flex-col justify-between gap-3">
+              <div>
+                <div class="font-bold text-white mb-1">🛡️ Check sicurezza prima di pubblicare</div>
+                <p class="text-slate-400">Verifica che non ci siano chiavi esposte o file dimenticati.</p>
+              </div>
+              <button class="copy-dynamic px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold cursor-pointer" data-copy="Prima di fare il push su GitHub, controlla che non ci siano file .env, chiavi API, password, node_modules o file pesanti inclusi. Fammi prima l'elenco di cosa escludi e poi procedi.">📋 Copia Prompt Sicurezza</button>
+            </div>
           </div>
         </div>
       </div>
@@ -349,6 +453,38 @@
         <div class="mt-2 text-xs text-slate-400 space-y-1.5 border-t border-slate-800 pt-3">
           <p>📊 <strong>Quota condivisa a finestra di 5 ore:</strong> tutti i modelli Gemini 4 (Hydrogen, Neon, Carbon) attingono dallo stesso pool di quota Gemini (i reset non si accumulano). Controlla il consumo reale su <strong>View Usage</strong> in fondo al menu Model.</p>
           <p>⚙️ <strong>Livelli di ragionamento:</strong> il menu mostra l'etichetta <em>Medium</em> come default, ma i modelli Gemini 4 supportano fino a 4 livelli (Low, Medium, High, Extra High). Se Carbon ti appare "Unavailable" su AI Pro, verifica il piano su <code>one.google.com</code> o fai logout/login in Antigravity.</p>
+        </div>
+      </div>
+
+      <!-- ORCHESTRATOR DEEP DIVE -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">Guida Pratica Orchestrator</span>
+          <h3 class="text-lg font-bold text-white mt-2">🎛️ Come usare e settare Orchestrator senza sprecare crediti</h3>
+          <p class="text-sm text-slate-400 mt-1">In parole semplici: invece di far fare tutto a un solo modello costoso, Orchestrator divide il lavoro tra un <strong>Architetto (Planner)</strong> che decide i passi e un <strong>Operaio veloce (Executor)</strong> che esegue i compiti.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="bg-slate-950 border border-emerald-500/30 rounded-xl p-4 space-y-2">
+            <div class="font-bold text-emerald-300">✅ Setup #1 — Uso Quotidiano AI Pro (Consigliato)</div>
+            <p class="text-slate-300"><strong>Planner:</strong> <code>Gemini 4 Neon</code> (High / Extra) · <strong>Executor:</strong> <code>Gemini 4 Hydrogen</code></p>
+            <p class="text-slate-400">Neon ragiona e prepara la strategia, Hydrogen esegue veloce le modifiche e le ricerche. Risparmi molta quota e hai risultati precisi.</p>
+          </div>
+          <div class="bg-slate-950 border border-rose-500/30 rounded-xl p-4 space-y-2">
+            <div class="font-bold text-rose-300">🚀 Setup #2 — Progetti Complessi / Architetture</div>
+            <p class="text-slate-300"><strong>Planner:</strong> <code>Gemini 4 Carbon</code> · <strong>Executor:</strong> <code>Gemini 4 Hydrogen</code> (o <code>Neon</code>)</p>
+            <p class="text-slate-400">Usalo solo quando devi costruire un sistema grande da zero, migrare più repository o risolvere bug difficili.</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4 text-xs space-y-2">
+          <div class="font-bold text-white">📍 Dove si imposta (passo-passo):</div>
+          <ol class="list-decimal pl-4 space-y-1 text-slate-300">
+            <li>Apri Antigravity → <strong>Settings &gt; Models &gt; Orchestrator Settings</strong>.</li>
+            <li>Scegli il <strong>Planner</strong> (Neon o Carbon) e l'<strong>Executor</strong> (Hydrogen).</li>
+            <li><strong>Controllo obbligatorio:</strong> verifica che né Planner né Executor siano su <em>Gemini 4 Argon</em> o <em>3.8 Flash</em> (verranno rimossi il 30 novembre 2026).</li>
+            <li>Nella chat seleziona <strong>Orchestrator</strong> dal menu Model solo quando il lavoro ha <strong>più fasi o più file</strong>. Per una domanda veloce o un singolo file, resta su Hydrogen o Neon!</li>
+          </ol>
         </div>
       </div>
     </section>
