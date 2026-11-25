@@ -263,9 +263,27 @@
 
     <!-- TAB 4: MODELS -->
     <section id="tab-models" class="tab-panel hidden space-y-4">
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
-        <h2 class="text-lg font-bold text-white mb-1">Quale Modello scegliere nel menu?</h2>
-        <p class="text-sm text-slate-400 mb-4">Usa il motore giusto per non sprecare crediti e ottenere risultati precisi.</p>
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
+        <div>
+          <h2 class="text-lg font-bold text-white mb-1">Quale Modello scegliere nel menu?</h2>
+          <p class="text-sm text-slate-400">Guida operativa aggiornata a novembre 2026 (incluso sblocco di <strong>Gemini 4 Carbon</strong> su Google AI Pro): usa il motore giusto per non bruciare la quota ogni 5 ore.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div class="bg-slate-950/70 border border-emerald-500/30 rounded-xl p-3.5">
+            <div class="font-semibold text-emerald-300 mb-1">⚡ Task veloci &amp; quotidiani</div>
+            <p class="text-slate-300">Usa <strong>Gemini 4 Hydrogen</strong>. Sostituisce 3.8 Flash, costa metà rispetto a Neon ed è aperto a tutti i piani.</p>
+          </div>
+          <div class="bg-slate-950/70 border border-sky-500/30 rounded-xl p-3.5">
+            <div class="font-semibold text-sky-300 mb-1">🛠️ Coding serio &amp; lavoro giornaliero</div>
+            <p class="text-slate-300">Usa <strong>Gemini 4 Neon</strong> (o <strong>Claude Sonnet 5.5</strong>). Neon è il miglior equilibrio tra qualità da frontiera, velocità e consumo.</p>
+          </div>
+          <div class="bg-slate-950/70 border border-rose-500/30 rounded-xl p-3.5">
+            <div class="font-semibold text-rose-300 mb-1">🧠 Casi estremi &amp; architetture</div>
+            <p class="text-slate-300">Usa <strong>Gemini 4 Carbon</strong> (ora incluso in AI Pro!) o <strong>Claude Opus 5.5</strong> solo quando Neon o Sonnet si bloccano.</p>
+          </div>
+        </div>
+
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse text-sm">
             <thead>
@@ -273,58 +291,64 @@
                 <th class="py-3 pr-4">Modello</th>
                 <th class="py-3 pr-4">Ruolo</th>
                 <th class="py-3 pr-4">Consumo</th>
-                <th class="py-3">Quando usarlo</th>
+                <th class="py-3">Come e quando usarlo</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-800 text-slate-300">
               <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">Claude Sonnet 5.5</td>
-                <td class="py-3.5 pr-4">Consulente Senior &amp; Dev</td>
+                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 4 Hydrogen <span class="ml-1 px-2 py-0.5 rounded text-xs bg-sky-500/20 text-sky-300">🆕 Nuovo</span></td>
+                <td class="py-3.5 pr-4">Assistente Veloce (ex Flash)</td>
+                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-emerald-500/20 text-emerald-300">🟢 Basso</span></td>
+                <td class="py-3.5"><strong>Nuovo standard per task rapidi</strong> (disponibile su tutti i piani). Domande veloci, riassunti PDF, ricerche web, Drive/Calendar, esecuzioni rapide ed Executor nell'Orchestrator.</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 4 Neon <span class="ml-1 px-2 py-0.5 rounded text-xs bg-sky-500/20 text-sky-300">🆕 Nuovo</span></td>
+                <td class="py-3.5 pr-4">Dev &amp; Analisi Quotidiana</td>
                 <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-amber-500/20 text-amber-300">🟡 Medio</span></td>
-                <td class="py-3.5"><strong>Scelta #1 nel 90% dei casi.</strong> Siti web, copy social/B2B, ricerche strategiche, debug preciso senza rompere nulla.</td>
+                <td class="py-3.5"><strong>Punto d'equilibrio (sweet spot)</strong> tra Hydrogen e Carbon. Ottimo per modifiche su repo, refactoring, debug multi-step e analisi documenti: costa ~32–50% meno di Carbon per task.</td>
               </tr>
               <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 3.8 Flash <span class="ml-1 px-2 py-0.5 rounded text-xs bg-yellow-500/20 text-yellow-300">⏳ In uscita</span></td>
-                <td class="py-3.5 pr-4">Assistente Veloce</td>
-                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-emerald-500/20 text-emerald-300">🟢 Minimo</span></td>
-                <td class="py-3.5">Domande rapide, riassunti PDF, ricerche web veloci, Drive e Calendar. <em>Verrà rimosso: passa a Gemini 4 Hydrogen.</em></td>
+                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 4 Carbon <span class="ml-1 px-2 py-0.5 rounded text-xs bg-sky-500/20 text-sky-300">🆕 AI Pro</span></td>
+                <td class="py-3.5 pr-4">Architetto Frontiera</td>
+                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-rose-500/20 text-rose-300">🔴 Alto</span></td>
+                <td class="py-3.5"><strong>Ora incluso anche in AI Pro</strong> (prima solo Ultra). Ragiona più a lungo ("long-horizon") con verifiche estese: usalo per architetture complesse, bug ostici, cybersecurity o quando Neon non basta.</td>
               </tr>
               <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">Claude Opus 5.5</td>
+                <td class="py-3.5 pr-4 font-semibold text-white">Orchestrator (Gemini 4 Neon Extra) <span class="ml-1 px-2 py-0.5 rounded text-xs bg-sky-500/20 text-sky-300">🆕 Nuovo</span></td>
+                <td class="py-3.5 pr-4">Capo Cantiere Multi-Agente</td>
+                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-orange-500/20 text-orange-300">🟠 Medio-Alto</span></td>
+                <td class="py-3.5">Coordina piani complessi e <code>/teamwork</code>. Su AI Pro/Ultra puoi separare chi pianifica e chi esegue in <strong>Settings &gt; Models &gt; Orchestrator Settings</strong> (es. Neon pianifica, Hydrogen esegue).</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 pr-4 font-semibold text-white">Claude Sonnet 5.5 <span class="ml-1 px-2 py-0.5 rounded text-xs bg-sky-500/20 text-sky-300">🆕 Nuovo</span></td>
+                <td class="py-3.5 pr-4">Consulente Senior &amp; Copy</td>
+                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-amber-500/20 text-amber-300">🟡 Medio</span></td>
+                <td class="py-3.5"><strong>Alternativa #1 a Neon</strong> per siti web, copy social/B2B, strategie e coding chirurgico senza rompere nulla.</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 pr-4 font-semibold text-white">Claude Opus 5.5 <span class="ml-1 px-2 py-0.5 rounded text-xs bg-sky-500/20 text-sky-300">🆕 Nuovo</span></td>
                 <td class="py-3.5 pr-4">Direttore Tecnico</td>
                 <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-rose-500/20 text-rose-300">🔴 Molto Alto</span></td>
-                <td class="py-3.5">Solo per problemi logici estremi o ricerche di mercato multi-documento molto complesse.</td>
+                <td class="py-3.5">Solo per problemi logici estremi o analisi multi-documento molto complesse (in alternativa a Gemini 4 Carbon).</td>
               </tr>
               <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">Orchestrator (Gemini 4 Neon Extra)</td>
-                <td class="py-3.5 pr-4">Capo Cantiere</td>
-                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-orange-500/20 text-orange-300">🟠 Medio-Alto</span></td>
-                <td class="py-3.5">Per coordinare più passaggi complessi e `/teamwork` in autonomia.</td>
+                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 3.8 Flash &amp; Gemini 4 Argon <span class="ml-1 px-2 py-0.5 rounded text-xs bg-yellow-500/20 text-yellow-300">⏳ Escono 30 Nov</span></td>
+                <td class="py-3.5 pr-4">Legacy (dismissione)</td>
+                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-500/20 text-slate-300">⚪ Legacy</span></td>
+                <td class="py-3.5">Verranno rimossi il <strong>30 novembre 2026</strong>. Sostituisci Flash con <strong>Hydrogen</strong> e Argon con <strong>Neon / Carbon</strong> (controlla anche <em>Orchestrator Settings</em>).</td>
               </tr>
               <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 4 Neon / Carbon / Hydrogen <span class="ml-1 px-2 py-0.5 rounded text-xs bg-sky-500/20 text-sky-300">🆕 Nuovi</span></td>
-                <td class="py-3.5 pr-4">Specialisti Veloci</td>
-                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-emerald-500/20 text-emerald-300">🟢 Medio-Basso</span></td>
-                <td class="py-3.5">Famiglia Gemini 4 (livello Medium): sostituisce Flash per i task rapidi. Hydrogen è il default consigliato; Neon e Carbon sono alternative equivalenti come consumo, da provare se Hydrogen non rende.</td>
-              </tr>
-              <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">Gemini 4 Argon <span class="ml-1 px-2 py-0.5 rounded text-xs bg-yellow-500/20 text-yellow-300">⏳ In uscita</span></td>
-                <td class="py-3.5 pr-4">Specialista (dismissione)</td>
+                <td class="py-3.5 pr-4 font-semibold text-white">GPT-OSS 120B <span class="ml-1 px-2 py-0.5 rounded text-xs bg-orange-500/20 text-orange-300">⚠️ Notice (30 Nov)</span></td>
+                <td class="py-3.5 pr-4">Open-source (dismissione)</td>
                 <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-amber-500/20 text-amber-300">🟡 Medio</span></td>
-                <td class="py-3.5">Evita di basarci nuovi flussi: sarà rimosso. Usa Hydrogen.</td>
-              </tr>
-              <tr>
-                <td class="py-3.5 pr-4 font-semibold text-white">GPT-OSS 120B <span class="ml-1 px-2 py-0.5 rounded text-xs bg-orange-500/20 text-orange-300">⚠️ Notice</span></td>
-                <td class="py-3.5 pr-4">Modello open-source</td>
-                <td class="py-3.5 pr-4"><span class="px-2 py-0.5 rounded text-xs font-medium bg-amber-500/20 text-amber-300">🟡 Medio</span></td>
-                <td class="py-3.5">Segnalato con avviso dal selettore: controlla la nota in Antigravity prima di usarlo su lavori importanti. Per il lavoro reale preferisci Sonnet 5.5.</td>
+                <td class="py-3.5">In uscita il <strong>30 novembre 2026</strong>. Non impostarci flussi nuovi: per lavoro reale usa Hydrogen, Neon o Sonnet 5.5.</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="mt-4 text-xs text-slate-400 space-y-1">
-          <p>🆕 <strong>Nuovo</strong> = appena aggiunto · ⏳ <strong>In uscita</strong> = verrà rimosso a breve · ⚠️ <strong>Notice</strong> = avviso da leggere nel selettore.</p>
-          <p>📊 Nel selettore tutti i modelli risultano di livello "Medium": i consumi qui sono indicativi. Per il dato reale apri <strong>View Usage</strong> in fondo al menu Model (vedi anche il Simulatore Token).</p>
+        <div class="mt-2 text-xs text-slate-400 space-y-1.5 border-t border-slate-800 pt-3">
+          <p>📊 <strong>Quota condivisa a finestra di 5 ore:</strong> tutti i modelli Gemini 4 (Hydrogen, Neon, Carbon) attingono dallo stesso pool di quota Gemini (i reset non si accumulano). Controlla il consumo reale su <strong>View Usage</strong> in fondo al menu Model.</p>
+          <p>⚙️ <strong>Livelli di ragionamento:</strong> il menu mostra l'etichetta <em>Medium</em> come default, ma i modelli Gemini 4 supportano fino a 4 livelli (Low, Medium, High, Extra High). Se Carbon ti appare "Unavailable" su AI Pro, verifica il piano su <code>one.google.com</code> o fai logout/login in Antigravity.</p>
         </div>
       </div>
     </section>
@@ -525,7 +549,7 @@
         title: "🕵️ Analisi Competitor & Mercato",
         sub: "Spia offerte, prezzi, posizionamento e debolezze",
         tags: "concorrenti competitor spy prezzi confronto analisi sito",
-        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
+        model: "Gemini 4 Hydrogen",
         cmd: "Ricerca Web + Browse",
         cost: "Minimo",
         why: "Un modello Gemini veloce (Hydrogen/Flash) legge i siti dei concorrenti in tempo reale a costo bassissimo.",
@@ -763,7 +787,7 @@
         title: "📁 Leggere & Riassumere File su Drive",
         sub: "PDF lunghi, contratti, appunti in 10 secondi",
         tags: "drive pdf riassunto leggere documento file cercare",
-        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
+        model: "Gemini 4 Hydrogen",
         cmd: "Skill: gdrive",
         cost: "Minimo",
         why: "Estrae i punti chiave risparmiando fino al 90% dei token.",
@@ -775,7 +799,7 @@
         title: "📅 Gestire Agenda & Call (Calendar)",
         sub: "Trova buchi liberi o crea appuntamenti",
         tags: "calendario agenda call appuntamenti orari gcalendar",
-        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
+        model: "Gemini 4 Hydrogen",
         cmd: "Skill: gcalendar",
         cost: "Minimo",
         why: "Legge la tua agenda reale e gestisce gli slot.",
@@ -787,7 +811,7 @@
         title: "🎓 Imparare Qualsiasi Tema in 2 Minuti",
         sub: "Spiegazioni semplici zero-gergo",
         tags: "imparare studiare capire spiegazione semplice guida personale",
-        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
+        model: "Gemini 4 Hydrogen",
         cmd: "Chat Normale",
         cost: "Minimo",
         why: "Ideale per capire al volo normative, tech, fiscalità o strumenti nuovi.",
@@ -799,7 +823,7 @@
         title: "🧭 Organizzare Viaggi, Spese & Routine",
         sub: "Itinerari, budget familiare, checklist personali",
         tags: "viaggio vacanza spese budget personale casa organizzazione checklist",
-        model: "Gemini 4 Hydrogen (in alternativa 3.8 Flash, in uscita)",
+        model: "Gemini 4 Hydrogen",
         cmd: "Chat / gsheets",
         cost: "Minimo",
         why: "Organizza in tabelle chiare viaggi di lavoro, spese mensili o liste operative.",
